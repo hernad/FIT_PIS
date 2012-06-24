@@ -1,0 +1,1379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<architect-project version="1.0" appversion="1.0.6">
+ <project-name>RG_Magacin</project-name>
+ <print-settings numCopies="1" zoom="1.0" pageNumbersPrinted="true" orientation="1" paperWidth="612.0" paperHeight="792.0" leftBorder="50.0" rightBorder="50.0" topBorder="50.0" bottomBorder="50.0" />
+ <project-data-sources>
+  <data-source id="DS0">
+   <property key="Logical" value="PlayPen Database" />
+  </data-source>
+  <data-source id="DS2">
+   <property key="Connection Type" value="PostgreSQL" />
+   <property key="Logical" value="RG_IS" />
+   <property key="JDBC URL" value="jdbc:postgresql://localhost:5432/RG_Magacin" />
+   <property key="UID" value="admin" />
+   <property key="PWD" value="admin" />
+   <property key="ca.sqlpower.architect.etl.kettle.database" value="" />
+   <property key="ca.sqlpower.architect.etl.kettle.port" value="" />
+   <property key="ca.sqlpower.architect.etl.kettle.hostname" value="" />
+   <property key="ca.sqlpower.architect.etl.kettle.repos.login" value="" />
+   <property key="ca.sqlpower.architect.etl.kettle.repos.password" value="" />
+  </data-source>
+ </project-data-sources>
+ <source-databases>
+  <database id="DB0" populated="true" UUID="30d8316b-c33b-49d6-85f1-98a8fd361e49" dbcs-ref="DS2" name="RG_IS" physicalName="RG_IS" >
+   <catalog id="CAT1" populated="true" UUID="4a0aafb5-6083-41ae-a6b9-013c887a8fc5" name="RG_Magacin" nativeTerm="database" physicalName="RG_Magacin" >
+    <schema id="SCH2" populated="false" UUID="872ed2ba-be61-4571-90c5-2086124581f2" name="information_schema" nativeTerm="schema" physicalName="information_schema" >
+    </schema>
+    <schema id="SCH3" populated="false" UUID="0556b63c-7536-448a-a0c5-4815c6365bbc" name="pg_catalog" nativeTerm="schema" physicalName="pg_catalog" >
+    </schema>
+    <schema id="SCH4" populated="false" UUID="f9d22aa9-d26b-48b3-b660-7f3160dd2600" name="pg_toast_temp_1" nativeTerm="schema" physicalName="pg_toast_temp_1" >
+    </schema>
+    <schema id="SCH5" populated="true" UUID="aee72207-7bd9-4b22-948b-7302f7b48ce5" name="public" nativeTerm="schema" physicalName="public" >
+     <table id="TAB6" populated="true" UUID="3d637b4f-6f2d-493b-ad1f-698f81faea52" name="adrese" objectType="TABLE" physicalName="adrese" >
+      <remarks></remarks>
+      <folder id="FOLTAB61" populated="true" name="Columns" physicalName="Columns" type="1">
+       <column id="COL7" populated="true" UUID="e2fca171-55ef-4429-b555-3dee004583d6" autoIncrement="false" name="adresaid" nullable="0" physicalName="adresaid" precision="10" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL8" populated="true" UUID="f5e9c5e2-2f70-4855-a9e4-bdba3d4e47ff" autoIncrement="false" name="gradid" nullable="0" physicalName="gradid" precision="10" referenceCount="2" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL9" populated="true" UUID="af2dee48-54b2-4ae8-a774-7c4d7b08993e" autoIncrement="false" name="ulica" nullable="0" physicalName="ulica" precision="100" referenceCount="1" scale="0" sourceDataTypeName="bpchar" type="1" >
+        <remarks></remarks>
+       </column>
+       <column id="COL10" populated="true" UUID="86d4a433-b265-4705-8da7-371c7e44baa5" autoIncrement="false" name="broj" nullable="0" physicalName="broj" precision="10" referenceCount="1" scale="0" sourceDataTypeName="bpchar" type="1" >
+        <remarks></remarks>
+       </column>
+       <column id="COL11" populated="true" UUID="dd59bc80-6f86-4469-9b11-0e4526a050fb" autoIncrement="false" name="brojtelefona" nullable="0" physicalName="brojtelefona" precision="20" referenceCount="1" scale="0" sourceDataTypeName="bpchar" type="1" >
+        <remarks></remarks>
+       </column>
+       </folder>
+       <folder id="FOLTAB63" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+       </folder>
+       <folder id="FOLTAB62" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+       </folder>
+       <folder id="FOLTAB64" populated="true" name="Indices" physicalName="Indices" type="4">
+       <index id="IDX12" populated="true" UUID="b0bddb49-5dac-4dea-9b90-57258575e3f7" clustered="false" index-type="BTREE" name="adrese_pk" physicalName="adrese_pk" primaryKeyIndex="true" unique="true" >
+        <index-column id="IDC13" populated="true" UUID="d387bfa7-54ef-4e06-9ffb-ffc7300c8628" ascendingOrDescending="UNSPECIFIED" column-ref="COL7" name="adresaid" physicalName="adresaid" />
+       </index>
+      </folder>
+     </table>
+     <table id="TAB14" populated="true" UUID="53ac0b84-7853-457c-a7d2-896ecf283890" name="artikli" objectType="TABLE" physicalName="artikli" >
+      <remarks></remarks>
+      <folder id="FOLTAB141" populated="true" name="Columns" physicalName="Columns" type="1">
+       <column id="COL15" populated="true" UUID="50076662-5938-4ce9-ac12-4a417d46f904" autoIncrement="false" name="artikalid" nullable="0" physicalName="artikalid" precision="10" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL16" populated="true" UUID="52da3598-0b3c-45c0-b3ed-1cd6f6f08dac" autoIncrement="false" name="naziv" nullable="0" physicalName="naziv" precision="100" referenceCount="1" scale="0" sourceDataTypeName="bpchar" type="1" >
+        <remarks></remarks>
+       </column>
+       <column id="COL17" populated="true" UUID="8f39769a-f2da-45d9-ac94-7525c5ff5719" autoIncrement="false" name="skraceninaziv" nullable="0" physicalName="skraceninaziv" precision="20" referenceCount="1" scale="0" sourceDataTypeName="bpchar" type="1" >
+        <remarks></remarks>
+       </column>
+       <column id="COL18" populated="true" UUID="0c6a55c1-192b-4f57-b93e-9891875af664" autoIncrement="false" name="klijentid" nullable="0" physicalName="klijentid" precision="10" referenceCount="2" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       </folder>
+       <folder id="FOLTAB143" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+       </folder>
+       <folder id="FOLTAB142" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+       </folder>
+       <folder id="FOLTAB144" populated="true" name="Indices" physicalName="Indices" type="4">
+       <index id="IDX19" populated="true" UUID="d4013fbd-35ad-41e1-b1c0-fe8fa783a761" clustered="false" index-type="BTREE" name="artikli_pk" physicalName="artikli_pk" primaryKeyIndex="true" unique="true" >
+        <index-column id="IDC20" populated="true" UUID="0ad71821-bbd4-43da-8a08-af848f2c0d9f" ascendingOrDescending="UNSPECIFIED" column-ref="COL15" name="artikalid" physicalName="artikalid" />
+       </index>
+      </folder>
+     </table>
+     <table id="TAB21" populated="true" UUID="cca1ecc9-42a4-427d-a214-955927daaf60" name="dobavljaci" objectType="TABLE" physicalName="dobavljaci" >
+      <remarks></remarks>
+      <folder id="FOLTAB211" populated="true" name="Columns" physicalName="Columns" type="1">
+       <column id="COL22" populated="true" UUID="84288041-d81d-4c6c-9250-33b807685198" autoIncrement="false" name="klijentid" nullable="0" physicalName="klijentid" precision="10" primaryKeySeq="0" referenceCount="2" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL23" populated="true" UUID="b838322c-c588-4ec6-9a15-3831ede96e82" autoIncrement="false" name="stalnidobavljac" nullable="0" physicalName="stalnidobavljac" precision="1" referenceCount="1" scale="0" sourceDataTypeName="bpchar" type="1" >
+        <remarks></remarks>
+       </column>
+       </folder>
+       <folder id="FOLTAB213" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+       </folder>
+       <folder id="FOLTAB212" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+       </folder>
+       <folder id="FOLTAB214" populated="true" name="Indices" physicalName="Indices" type="4">
+       <index id="IDX24" populated="true" UUID="0fe1c7fa-d5e7-4df3-a7d8-442c2b16288c" clustered="false" index-type="BTREE" name="dobavljaci_pk" physicalName="dobavljaci_pk" primaryKeyIndex="true" unique="true" >
+        <index-column id="IDC25" populated="true" UUID="a2e87df3-43ae-4af1-b388-fd46846dd2c8" ascendingOrDescending="UNSPECIFIED" column-ref="COL22" name="klijentid" physicalName="klijentid" />
+       </index>
+      </folder>
+     </table>
+     <table id="TAB26" populated="true" UUID="759c2914-b98d-430b-a51e-b9f145e65b43" name="dokumenti" objectType="TABLE" physicalName="dokumenti" >
+      <remarks></remarks>
+      <folder id="FOLTAB261" populated="true" name="Columns" physicalName="Columns" type="1">
+       <column id="COL27" populated="true" UUID="bbb7ee5e-bae4-4315-bb8e-48a84676c766" autoIncrement="false" name="dokumentid" nullable="0" physicalName="dokumentid" precision="10" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL28" populated="true" UUID="8f00115a-6c1e-40a0-ad38-16be58bd27b8" autoIncrement="false" name="datumdokumenta" nullable="0" physicalName="datumdokumenta" precision="13" referenceCount="1" scale="0" sourceDataTypeName="date" type="91" >
+        <remarks></remarks>
+       </column>
+       <column id="COL29" populated="true" UUID="86dea815-261c-4321-b551-51cc47fad8a2" autoIncrement="false" name="opis" nullable="0" physicalName="opis" precision="200" referenceCount="1" scale="0" sourceDataTypeName="bpchar" type="1" >
+        <remarks></remarks>
+       </column>
+       <column id="COL30" populated="true" UUID="88206905-6d68-4021-a256-9e5b1001592e" autoIncrement="false" name="brojdokumenta" nullable="0" physicalName="brojdokumenta" precision="50" referenceCount="1" scale="0" sourceDataTypeName="bpchar" type="1" >
+        <remarks></remarks>
+       </column>
+       <column id="COL31" populated="true" UUID="1d627180-b30f-418b-8020-16ec8150ea31" autoIncrement="false" name="klijentid" nullable="0" physicalName="klijentid" precision="10" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       </folder>
+       <folder id="FOLTAB263" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+       </folder>
+       <folder id="FOLTAB262" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+       </folder>
+       <folder id="FOLTAB264" populated="true" name="Indices" physicalName="Indices" type="4">
+       <index id="IDX32" populated="true" UUID="2b7d99a0-8d48-48c7-a574-862e6c5f0f21" clustered="false" index-type="BTREE" name="dokumenti_pk" physicalName="dokumenti_pk" primaryKeyIndex="true" unique="true" >
+        <index-column id="IDC33" populated="true" UUID="0c5acfca-ac2b-436a-a9a4-7277e7591c05" ascendingOrDescending="UNSPECIFIED" column-ref="COL27" name="dokumentid" physicalName="dokumentid" />
+       </index>
+      </folder>
+     </table>
+     <table id="TAB34" populated="true" UUID="20e84181-5ca0-484c-82ef-a3903000110e" name="drzave" objectType="TABLE" physicalName="drzave" >
+      <remarks></remarks>
+      <folder id="FOLTAB341" populated="true" name="Columns" physicalName="Columns" type="1">
+       <column id="COL35" populated="true" UUID="544e3347-b937-49ca-84b8-894cfafdfa82" autoIncrement="false" name="drzavaid" nullable="0" physicalName="drzavaid" precision="10" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL36" populated="true" UUID="d2dbb7a9-6f4b-4868-8249-d3efe2e42a9f" autoIncrement="false" name="oznaka" nullable="0" physicalName="oznaka" precision="2" referenceCount="1" scale="0" sourceDataTypeName="bpchar" type="1" >
+        <remarks></remarks>
+       </column>
+       <column id="COL37" populated="true" UUID="22bed2fc-2ebc-4b27-a485-459713c27d63" autoIncrement="false" name="oznakavaluta" nullable="0" physicalName="oznakavaluta" precision="3" referenceCount="1" scale="0" sourceDataTypeName="bpchar" type="1" >
+        <remarks></remarks>
+       </column>
+       <column id="COL38" populated="true" UUID="89f3c838-e66c-496e-a1a0-a47cc106abeb" autoIncrement="false" name="naziv" nullable="0" physicalName="naziv" precision="100" referenceCount="1" scale="0" sourceDataTypeName="bpchar" type="1" >
+        <remarks></remarks>
+       </column>
+       </folder>
+       <folder id="FOLTAB343" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+       </folder>
+       <folder id="FOLTAB342" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+       </folder>
+       <folder id="FOLTAB344" populated="true" name="Indices" physicalName="Indices" type="4">
+       <index id="IDX39" populated="true" UUID="be231b57-8542-4769-92cb-3bbe29bfd156" clustered="false" index-type="BTREE" name="drzave_1_pk" physicalName="drzave_1_pk" primaryKeyIndex="true" unique="true" >
+        <index-column id="IDC40" populated="true" UUID="02a49892-20f7-4b53-b18a-00174f9fc184" ascendingOrDescending="UNSPECIFIED" column-ref="COL35" name="drzavaid" physicalName="drzavaid" />
+       </index>
+      </folder>
+     </table>
+     <table id="TAB41" populated="true" UUID="72967507-93eb-4e48-b35f-74c20769a6d8" name="fakturedobavljaca" objectType="TABLE" physicalName="fakturedobavljaca" >
+      <remarks></remarks>
+      <folder id="FOLTAB411" populated="true" name="Columns" physicalName="Columns" type="1">
+       <column id="COL42" populated="true" UUID="49a9543c-d55e-4c67-bc9c-7ab48717f26d" autoIncrement="false" name="dokumentid" nullable="0" physicalName="dokumentid" precision="10" primaryKeySeq="0" referenceCount="2" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL43" populated="true" UUID="9408a055-ba2e-45e4-bc05-947ee6534228" autoIncrement="false" name="usloviplacanja" nullable="0" physicalName="usloviplacanja" precision="100" referenceCount="1" scale="0" sourceDataTypeName="bpchar" type="1" >
+        <remarks></remarks>
+       </column>
+       </folder>
+       <folder id="FOLTAB413" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+       </folder>
+       <folder id="FOLTAB412" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+       </folder>
+       <folder id="FOLTAB414" populated="true" name="Indices" physicalName="Indices" type="4">
+       <index id="IDX44" populated="true" UUID="741bd998-71ed-4eaa-9f73-dc995967d4ed" clustered="false" index-type="BTREE" name="fakturedobavljaca_pk" physicalName="fakturedobavljaca_pk" primaryKeyIndex="true" unique="true" >
+        <index-column id="IDC45" populated="true" UUID="8ad3e45f-f4d3-442e-bf4d-aafb430c95af" ascendingOrDescending="UNSPECIFIED" column-ref="COL42" name="dokumentid" physicalName="dokumentid" />
+       </index>
+      </folder>
+     </table>
+     <table id="TAB46" populated="true" UUID="7c500f8c-0879-46de-8335-1a48f2b0f117" name="gradovi" objectType="TABLE" physicalName="gradovi" >
+      <remarks></remarks>
+      <folder id="FOLTAB461" populated="true" name="Columns" physicalName="Columns" type="1">
+       <column id="COL47" populated="true" UUID="d445af9c-90fc-4153-9205-5e31e24ec9a6" autoIncrement="false" name="gradid" nullable="0" physicalName="gradid" precision="10" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL48" populated="true" UUID="d727bfec-78a5-4e69-bbfc-1a176eabf5e5" autoIncrement="false" name="kanttonid" nullable="0" physicalName="kanttonid" precision="10" referenceCount="2" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL49" populated="true" UUID="4e387f06-f069-4add-a857-60b1c617ec51" autoIncrement="false" name="ptt" nullable="0" physicalName="ptt" precision="6" referenceCount="1" scale="0" sourceDataTypeName="bpchar" type="1" >
+        <remarks></remarks>
+       </column>
+       <column id="COL50" populated="true" UUID="66fe10fa-8ddc-4e5a-8492-8f8f776adaf5" autoIncrement="false" name="naziv" nullable="0" physicalName="naziv" precision="100" referenceCount="1" scale="0" sourceDataTypeName="bpchar" type="1" >
+        <remarks></remarks>
+       </column>
+       </folder>
+       <folder id="FOLTAB463" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+       </folder>
+       <folder id="FOLTAB462" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+       </folder>
+       <folder id="FOLTAB464" populated="true" name="Indices" physicalName="Indices" type="4">
+       <index id="IDX51" populated="true" UUID="4d0b1a4d-f042-4c7f-bc11-917947bef599" clustered="false" index-type="BTREE" name="gradovi_1_pk" physicalName="gradovi_1_pk" primaryKeyIndex="true" unique="true" >
+        <index-column id="IDC52" populated="true" UUID="2014e018-e3f9-4ec0-b0af-8552d96736f0" ascendingOrDescending="UNSPECIFIED" column-ref="COL47" name="gradid" physicalName="gradid" />
+       </index>
+      </folder>
+     </table>
+     <table id="TAB53" populated="true" UUID="f970c286-d8fb-4977-ab93-6d4fb51c2b91" name="kantoni" objectType="TABLE" physicalName="kantoni" >
+      <remarks></remarks>
+      <folder id="FOLTAB531" populated="true" name="Columns" physicalName="Columns" type="1">
+       <column id="COL54" populated="true" UUID="cf2bd88c-3d92-4d1c-bf57-cd0f985e9974" autoIncrement="false" name="kantonid" nullable="0" physicalName="kantonid" precision="10" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL55" populated="true" UUID="af0fef61-00f1-452e-a43e-9904f24ee45d" autoIncrement="false" name="drzavaid" nullable="0" physicalName="drzavaid" precision="10" referenceCount="2" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL56" populated="true" UUID="0e5fc2e0-afb6-41e5-85ba-fe5e347de4a9" autoIncrement="false" name="naziv" nullable="0" physicalName="naziv" precision="100" referenceCount="1" scale="0" sourceDataTypeName="bpchar" type="1" >
+        <remarks></remarks>
+       </column>
+       </folder>
+       <folder id="FOLTAB533" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+       </folder>
+       <folder id="FOLTAB532" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+       </folder>
+       <folder id="FOLTAB534" populated="true" name="Indices" physicalName="Indices" type="4">
+       <index id="IDX57" populated="true" UUID="80c2b3c8-ca59-49a7-9ad5-eb3cebb7fac1" clustered="false" index-type="BTREE" name="konatoni_1_pk" physicalName="konatoni_1_pk" primaryKeyIndex="true" unique="true" >
+        <index-column id="IDC58" populated="true" UUID="453b909d-b528-403c-a30a-432f6cadbce7" ascendingOrDescending="UNSPECIFIED" column-ref="COL54" name="kantonid" physicalName="kantonid" />
+       </index>
+      </folder>
+     </table>
+     <table id="TAB59" populated="true" UUID="e594ae7a-5129-4374-90c7-3de5ed683581" name="klijenti" objectType="TABLE" physicalName="klijenti" >
+      <remarks></remarks>
+      <folder id="FOLTAB591" populated="true" name="Columns" physicalName="Columns" type="1">
+       <column id="COL60" populated="true" UUID="aef9a653-2cef-4f28-b6a7-6aabbd039526" autoIncrement="false" name="klijentid" nullable="0" physicalName="klijentid" precision="10" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL61" populated="true" UUID="30dd8f7e-0c0d-42cb-ad51-9b9ef414adda" autoIncrement="false" name="pdvbroj" nullable="0" physicalName="pdvbroj" precision="13" referenceCount="1" scale="0" sourceDataTypeName="bpchar" type="1" >
+        <remarks></remarks>
+       </column>
+       <column id="COL62" populated="true" UUID="bf309fdd-e2a6-4c8e-9bf3-ee369893be62" autoIncrement="false" name="adresaid" nullable="0" physicalName="adresaid" precision="10" referenceCount="2" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       </folder>
+       <folder id="FOLTAB593" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+       </folder>
+       <folder id="FOLTAB592" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+       </folder>
+       <folder id="FOLTAB594" populated="true" name="Indices" physicalName="Indices" type="4">
+       <index id="IDX63" populated="true" UUID="7ee1d50a-71e2-4039-a7df-80fbe7fba4de" clustered="false" index-type="BTREE" name="klijenti_pk" physicalName="klijenti_pk" primaryKeyIndex="true" unique="true" >
+        <index-column id="IDC64" populated="true" UUID="5d90c80c-b4b5-4ce4-aef9-d26891c783f2" ascendingOrDescending="UNSPECIFIED" column-ref="COL60" name="klijentid" physicalName="klijentid" />
+       </index>
+      </folder>
+     </table>
+     <table id="TAB65" populated="true" UUID="ddeef3eb-240b-4450-9e58-8c5bf1612976" name="korisnici" objectType="TABLE" physicalName="korisnici" >
+      <remarks></remarks>
+      <folder id="FOLTAB651" populated="true" name="Columns" physicalName="Columns" type="1">
+       <column id="COL66" populated="true" UUID="c1df6cb8-bfa2-437f-84b8-4fb7e352db30" autoIncrement="false" name="korisnikid" nullable="0" physicalName="korisnikid" precision="10" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL67" populated="true" UUID="cd3e31e4-33ff-434c-a491-3c7ebb6ec1ae" autoIncrement="false" name="korisnikime" nullable="0" physicalName="korisnikime" precision="50" referenceCount="1" scale="0" sourceDataTypeName="bpchar" type="1" >
+        <remarks></remarks>
+       </column>
+       <column id="COL68" populated="true" UUID="c1cd943f-c928-4928-b43a-7a1ff545ea76" autoIncrement="false" name="korisniklozinka" nullable="0" physicalName="korisniklozinka" precision="50" referenceCount="1" scale="0" sourceDataTypeName="bpchar" type="1" >
+        <remarks></remarks>
+       </column>
+       <column id="COL69" populated="true" UUID="b9790179-bc16-426a-b528-778d1df231a4" autoIncrement="false" name="email" nullable="0" physicalName="email" precision="100" referenceCount="1" scale="0" sourceDataTypeName="bpchar" type="1" >
+        <remarks></remarks>
+       </column>
+       <column id="COL70" populated="true" UUID="36eefe8c-93f7-4c7c-8f05-84d462951a29" autoIncrement="false" name="dokumentid" nullable="0" physicalName="dokumentid" precision="10" referenceCount="2" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       </folder>
+       <folder id="FOLTAB653" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+       </folder>
+       <folder id="FOLTAB652" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+       </folder>
+       <folder id="FOLTAB654" populated="true" name="Indices" physicalName="Indices" type="4">
+       <index id="IDX71" populated="true" UUID="0abd7dd1-63ed-4392-ab0d-bec8b6e38502" clustered="false" index-type="BTREE" name="korisnici_pk" physicalName="korisnici_pk" primaryKeyIndex="true" unique="true" >
+        <index-column id="IDC72" populated="true" UUID="7b1fd29b-439b-4597-8ce5-a8a6314008b9" ascendingOrDescending="UNSPECIFIED" column-ref="COL66" name="korisnikid" physicalName="korisnikid" />
+       </index>
+      </folder>
+     </table>
+     <table id="TAB73" populated="true" UUID="ee212051-dcf7-4c5f-a5ce-4784b122818c" name="kupci" objectType="TABLE" physicalName="kupci" >
+      <remarks></remarks>
+      <folder id="FOLTAB731" populated="true" name="Columns" physicalName="Columns" type="1">
+       <column id="COL74" populated="true" UUID="7dc12fec-d1fb-4f52-9ce1-2525bad91b99" autoIncrement="false" name="klijentid" nullable="0" physicalName="klijentid" precision="10" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL75" populated="true" UUID="a9ce6fd6-127f-4f68-9253-a0f897045c67" autoIncrement="false" name="kooperant" nullable="0" physicalName="kooperant" precision="1" referenceCount="1" scale="0" sourceDataTypeName="bpchar" type="1" >
+        <remarks></remarks>
+       </column>
+       </folder>
+       <folder id="FOLTAB733" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+       </folder>
+       <folder id="FOLTAB732" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+       </folder>
+       <folder id="FOLTAB734" populated="true" name="Indices" physicalName="Indices" type="4">
+       <index id="IDX76" populated="true" UUID="ab0bf267-4e85-498a-a17f-b1d6a29f5ba4" clustered="false" index-type="BTREE" name="kupci_pk" physicalName="kupci_pk" primaryKeyIndex="true" unique="true" >
+        <index-column id="IDC77" populated="true" UUID="c749f20e-4de7-4f14-af6a-8bda3c717a7f" ascendingOrDescending="UNSPECIFIED" column-ref="COL74" name="klijentid" physicalName="klijentid" />
+       </index>
+      </folder>
+     </table>
+     <table id="TAB78" populated="true" UUID="f5246798-18ba-42c3-95fc-a5a7538d6487" name="magacini" objectType="TABLE" physicalName="magacini" >
+      <remarks></remarks>
+      <folder id="FOLTAB781" populated="true" name="Columns" physicalName="Columns" type="1">
+       <column id="COL79" populated="true" UUID="fe5dcc3f-6fd6-4ce7-8991-1994dea6de76" autoIncrement="false" name="magacinid" nullable="0" physicalName="magacinid" precision="10" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL80" populated="true" UUID="3eb1e806-4689-4b58-b87a-e8a4abb7de79" autoIncrement="false" name="nazivmagacina" nullable="0" physicalName="nazivmagacina" precision="50" referenceCount="1" scale="0" sourceDataTypeName="bpchar" type="1" >
+        <remarks></remarks>
+       </column>
+       </folder>
+       <folder id="FOLTAB783" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+       </folder>
+       <folder id="FOLTAB782" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+       </folder>
+       <folder id="FOLTAB784" populated="true" name="Indices" physicalName="Indices" type="4">
+       <index id="IDX81" populated="true" UUID="8e966967-23c2-4cd0-8157-3d1c48e01119" clustered="false" index-type="BTREE" name="magacini_pk" physicalName="magacini_pk" primaryKeyIndex="true" unique="true" >
+        <index-column id="IDC82" populated="true" UUID="b7f3f669-b492-4542-a9f3-85900d3c4f38" ascendingOrDescending="UNSPECIFIED" column-ref="COL79" name="magacinid" physicalName="magacinid" />
+       </index>
+      </folder>
+     </table>
+     <table id="TAB83" populated="true" UUID="0851faa4-9883-4be6-b394-4269a76889e8" name="narudzbedobavljacima" objectType="TABLE" physicalName="narudzbedobavljacima" >
+      <remarks></remarks>
+      <folder id="FOLTAB831" populated="true" name="Columns" physicalName="Columns" type="1">
+       <column id="COL84" populated="true" UUID="aa038422-57cd-4c41-bf23-67f1660a5afa" autoIncrement="false" name="dokumentid" nullable="0" physicalName="dokumentid" precision="10" primaryKeySeq="0" referenceCount="2" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL85" populated="true" UUID="e4857e03-8dc2-4874-b555-0c87ea0b69e5" autoIncrement="false" name="vezaponudadobavljaca" nullable="0" physicalName="vezaponudadobavljaca" precision="10" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL86" populated="true" UUID="d17c0aa6-616b-41c7-8765-3b56adc7bd0e" autoIncrement="false" name="dodatnenapomene" nullable="0" physicalName="dodatnenapomene" precision="200" referenceCount="1" scale="0" sourceDataTypeName="bpchar" type="1" >
+        <remarks></remarks>
+       </column>
+       </folder>
+       <folder id="FOLTAB833" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+       </folder>
+       <folder id="FOLTAB832" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+       </folder>
+       <folder id="FOLTAB834" populated="true" name="Indices" physicalName="Indices" type="4">
+       <index id="IDX87" populated="true" UUID="e37d6143-f689-4d7c-9330-d87de9eb1da8" clustered="false" index-type="BTREE" name="narudzbedobavljacima_pk" physicalName="narudzbedobavljacima_pk" primaryKeyIndex="true" unique="true" >
+        <index-column id="IDC88" populated="true" UUID="cc1538c9-0657-4576-a946-7fac0c97e333" ascendingOrDescending="UNSPECIFIED" column-ref="COL84" name="dokumentid" physicalName="dokumentid" />
+       </index>
+      </folder>
+     </table>
+     <table id="TAB89" populated="true" UUID="0fa2e5d4-002a-49bd-8ea5-3eead9554a43" name="ponudedobavljaca" objectType="TABLE" physicalName="ponudedobavljaca" >
+      <remarks></remarks>
+      <folder id="FOLTAB891" populated="true" name="Columns" physicalName="Columns" type="1">
+       <column id="COL90" populated="true" UUID="3df137c8-ecf3-4de6-8d6a-4ffb77a83daf" autoIncrement="false" name="dokumentid" nullable="0" physicalName="dokumentid" precision="10" primaryKeySeq="0" referenceCount="2" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL91" populated="true" UUID="09f83773-1928-4b1f-9039-2628abbb76d4" autoIncrement="false" name="usloviisporuke" nullable="0" physicalName="usloviisporuke" precision="200" referenceCount="1" scale="0" sourceDataTypeName="bpchar" type="1" >
+        <remarks></remarks>
+       </column>
+       </folder>
+       <folder id="FOLTAB893" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+       </folder>
+       <folder id="FOLTAB892" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+       </folder>
+       <folder id="FOLTAB894" populated="true" name="Indices" physicalName="Indices" type="4">
+       <index id="IDX92" populated="true" UUID="4ec932be-6027-4a9c-bccd-7d54ad57edeb" clustered="false" index-type="BTREE" name="ponudedobavljaca_pk" physicalName="ponudedobavljaca_pk" primaryKeyIndex="true" unique="true" >
+        <index-column id="IDC93" populated="true" UUID="04f0deb5-9dd9-40a3-822a-0ec388fa8586" ascendingOrDescending="UNSPECIFIED" column-ref="COL90" name="dokumentid" physicalName="dokumentid" />
+       </index>
+      </folder>
+     </table>
+     <table id="TAB94" populated="true" UUID="d66dad98-4113-4a4e-8bea-8c8fc9b6eb9a" name="proizvodi" objectType="TABLE" physicalName="proizvodi" >
+      <remarks></remarks>
+      <folder id="FOLTAB941" populated="true" name="Columns" physicalName="Columns" type="1">
+       <column id="COL95" populated="true" UUID="6f4588c5-bd94-4b11-b02e-8c94a7717fae" autoIncrement="false" name="artikalid" nullable="0" physicalName="artikalid" precision="10" primaryKeySeq="0" referenceCount="2" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL96" populated="true" UUID="14b5beef-39ed-4af2-bc5e-6ea6f25b4ce8" autoIncrement="false" name="proizvodnipogonid" nullable="0" physicalName="proizvodnipogonid" precision="10" referenceCount="2" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       </folder>
+       <folder id="FOLTAB943" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+       </folder>
+       <folder id="FOLTAB942" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+       </folder>
+       <folder id="FOLTAB944" populated="true" name="Indices" physicalName="Indices" type="4">
+       <index id="IDX97" populated="true" UUID="c36b2963-58dd-4fde-a9b2-5da2c7bd443a" clustered="false" index-type="BTREE" name="proizvodi_pk" physicalName="proizvodi_pk" primaryKeyIndex="true" unique="true" >
+        <index-column id="IDC98" populated="true" UUID="8a43fe08-f63b-4804-96fa-4fd392fbba72" ascendingOrDescending="UNSPECIFIED" column-ref="COL95" name="artikalid" physicalName="artikalid" />
+       </index>
+      </folder>
+     </table>
+     <table id="TAB99" populated="true" UUID="ce02b704-fc9d-4a2d-ac30-9189983f24f1" name="proizvodnipogoni" objectType="TABLE" physicalName="proizvodnipogoni" >
+      <remarks></remarks>
+      <folder id="FOLTAB991" populated="true" name="Columns" physicalName="Columns" type="1">
+       <column id="COL100" populated="true" UUID="f2c55935-0d5c-42f3-9d30-1146137bc60c" autoIncrement="false" name="proizvodnipogonid" nullable="0" physicalName="proizvodnipogonid" precision="10" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL101" populated="true" UUID="bff25555-3e6e-466a-89df-61f9bea0c0b1" autoIncrement="false" name="nazivpogona" nullable="0" physicalName="nazivpogona" precision="100" referenceCount="1" scale="0" sourceDataTypeName="bpchar" type="1" >
+        <remarks></remarks>
+       </column>
+       </folder>
+       <folder id="FOLTAB993" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+       </folder>
+       <folder id="FOLTAB992" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+       </folder>
+       <folder id="FOLTAB994" populated="true" name="Indices" physicalName="Indices" type="4">
+       <index id="IDX102" populated="true" UUID="06a01091-680c-422b-92c9-9b715ac3d5b7" clustered="false" index-type="BTREE" name="proizvodnipogoni_pk" physicalName="proizvodnipogoni_pk" primaryKeyIndex="true" unique="true" >
+        <index-column id="IDC103" populated="true" UUID="69a2b213-4b6d-4d04-b906-4379a04c0ba8" ascendingOrDescending="UNSPECIFIED" column-ref="COL100" name="proizvodnipogonid" physicalName="proizvodnipogonid" />
+       </index>
+      </folder>
+     </table>
+     <table id="TAB104" populated="true" UUID="e0570053-4857-4c31-9f30-50422859b23e" name="racunikupci" objectType="TABLE" physicalName="racunikupci" >
+      <remarks></remarks>
+      <folder id="FOLTAB1041" populated="true" name="Columns" physicalName="Columns" type="1">
+       <column id="COL105" populated="true" UUID="725a3a03-ae9b-4832-bd10-13ee071fc4e8" autoIncrement="false" name="dokumentid" nullable="0" physicalName="dokumentid" precision="10" referenceCount="2" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL106" populated="true" UUID="23c6e34c-9068-4941-a9ef-0add28a7a6cb" autoIncrement="false" name="reklamiraniracunbroj" nullable="0" physicalName="reklamiraniracunbroj" precision="50" referenceCount="1" scale="0" sourceDataTypeName="bpchar" type="1" >
+        <remarks></remarks>
+       </column>
+       <column id="COL107" populated="true" UUID="037a207e-e8f7-49d4-bdc7-a061fed4d6ed" autoIncrement="false" name="tekstnakrajuracuna" nullable="0" physicalName="tekstnakrajuracuna" precision="200" referenceCount="1" scale="0" sourceDataTypeName="bpchar" type="1" >
+        <remarks></remarks>
+       </column>
+       </folder>
+       <folder id="FOLTAB1043" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+       </folder>
+       <folder id="FOLTAB1042" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+       </folder>
+       <folder id="FOLTAB1044" populated="true" name="Indices" physicalName="Indices" type="4">
+       <index id="IDX108" populated="true" UUID="891ca6a7-bfe3-49d0-9a68-05d6db52f7bf" clustered="false" index-type="BTREE" name="racunikupci_pk" physicalName="racunikupci_pk" primaryKeyIndex="true" unique="true" >
+       </index>
+      </folder>
+     </table>
+     <table id="TAB109" populated="true" UUID="9f68465e-7d7f-44a4-90b5-f3fcef1e14a8" name="radninalozi" objectType="TABLE" physicalName="radninalozi" >
+      <remarks></remarks>
+      <folder id="FOLTAB1091" populated="true" name="Columns" physicalName="Columns" type="1">
+       <column id="COL110" populated="true" UUID="a6ebdfd8-783e-49a0-a1b0-6a7103176a62" autoIncrement="false" name="dokumentid" nullable="0" physicalName="dokumentid" precision="10" primaryKeySeq="0" referenceCount="2" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL111" populated="true" UUID="0cc816d3-33a0-4366-b47e-25b4d08e5d0a" autoIncrement="false" name="proizvodnipogonid" nullable="0" physicalName="proizvodnipogonid" precision="10" referenceCount="2" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL112" populated="true" UUID="7e4419d1-01c5-4f77-a5d5-709e287aab1a" autoIncrement="false" name="ovlastenoliceid" nullable="0" physicalName="ovlastenoliceid" precision="10" referenceCount="2" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       </folder>
+       <folder id="FOLTAB1093" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+       </folder>
+       <folder id="FOLTAB1092" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+       </folder>
+       <folder id="FOLTAB1094" populated="true" name="Indices" physicalName="Indices" type="4">
+       <index id="IDX113" populated="true" UUID="6dc96e1b-fe3b-499a-b00a-ae062cc07d44" clustered="false" index-type="BTREE" name="radninalozi_pk" physicalName="radninalozi_pk" primaryKeyIndex="true" unique="true" >
+        <index-column id="IDC114" populated="true" UUID="479831c3-574e-4a46-a3e8-21308ef4ab9a" ascendingOrDescending="UNSPECIFIED" column-ref="COL110" name="dokumentid" physicalName="dokumentid" />
+       </index>
+      </folder>
+     </table>
+     <table id="TAB115" populated="true" UUID="d1955d3a-f015-49e6-b942-266deb96c3b6" name="roba" objectType="TABLE" physicalName="roba" >
+      <remarks></remarks>
+      <folder id="FOLTAB1151" populated="true" name="Columns" physicalName="Columns" type="1">
+       <column id="COL116" populated="true" UUID="7cb81c11-fe52-40f0-a05c-cbfb4f73c569" autoIncrement="false" name="artikalid" nullable="0" physicalName="artikalid" precision="10" primaryKeySeq="0" referenceCount="2" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       </folder>
+       <folder id="FOLTAB1153" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+       </folder>
+       <folder id="FOLTAB1152" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+       </folder>
+       <folder id="FOLTAB1154" populated="true" name="Indices" physicalName="Indices" type="4">
+       <index id="IDX117" populated="true" UUID="c0c8b3f8-2a4b-4949-861d-04a901965834" clustered="false" index-type="BTREE" name="roba_pk" physicalName="roba_pk" primaryKeyIndex="true" unique="true" >
+        <index-column id="IDC118" populated="true" UUID="6d485cbb-7dad-4734-809c-48f111c05307" ascendingOrDescending="UNSPECIFIED" column-ref="COL116" name="artikalid" physicalName="artikalid" />
+       </index>
+      </folder>
+     </table>
+     <table id="TAB119" populated="true" UUID="667b697e-f507-4adf-b55b-41fe9b757bbb" name="sirovine" objectType="TABLE" physicalName="sirovine" >
+      <remarks></remarks>
+      <folder id="FOLTAB1191" populated="true" name="Columns" physicalName="Columns" type="1">
+       <column id="COL120" populated="true" UUID="13245a17-bb45-4af8-94fc-83255eb267e1" autoIncrement="false" name="artikalid" nullable="0" physicalName="artikalid" precision="10" primaryKeySeq="0" referenceCount="2" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       </folder>
+       <folder id="FOLTAB1193" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+       </folder>
+       <folder id="FOLTAB1192" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+       </folder>
+       <folder id="FOLTAB1194" populated="true" name="Indices" physicalName="Indices" type="4">
+       <index id="IDX121" populated="true" UUID="9bca2b5c-23be-4a53-b6df-5a7c2a60b98c" clustered="false" index-type="BTREE" name="sirovine_pk" physicalName="sirovine_pk" primaryKeyIndex="true" unique="true" >
+        <index-column id="IDC122" populated="true" UUID="3a0b62e4-96ba-409b-a48b-513c3c7638b3" ascendingOrDescending="UNSPECIFIED" column-ref="COL120" name="artikalid" physicalName="artikalid" />
+       </index>
+      </folder>
+     </table>
+     <table id="TAB123" populated="true" UUID="42b64b99-df19-4bd3-889c-30d901419ab2" name="stanjemagacini" objectType="TABLE" physicalName="stanjemagacini" >
+      <remarks></remarks>
+      <folder id="FOLTAB1231" populated="true" name="Columns" physicalName="Columns" type="1">
+       <column id="COL124" populated="true" UUID="a73cf1bf-34ab-4717-8137-76441566a3be" autoIncrement="false" name="magacinskatransakcijaid" nullable="0" physicalName="magacinskatransakcijaid" precision="10" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL125" populated="true" UUID="7392bc38-b005-45de-82a8-f97ba158f3ba" autoIncrement="false" name="magacinid" nullable="0" physicalName="magacinid" precision="10" referenceCount="2" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL126" populated="true" UUID="70887461-47c4-44f6-abb2-64d13a6630ba" autoIncrement="false" name="dokumentid" nullable="0" physicalName="dokumentid" precision="10" referenceCount="2" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL127" populated="true" UUID="c9473d62-11f6-44ae-9688-66b314931262" autoIncrement="false" name="opistransakcije" nullable="0" physicalName="opistransakcije" precision="200" referenceCount="1" scale="0" sourceDataTypeName="bpchar" type="1" >
+        <remarks></remarks>
+       </column>
+       <column id="COL128" populated="true" UUID="0028e74f-c01e-4a47-b81c-0a5389c431a4" autoIncrement="false" name="korisnikid" nullable="0" physicalName="korisnikid" precision="10" referenceCount="2" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL129" populated="true" UUID="927ef355-4cb0-4cfa-9214-58461cdb6969" autoIncrement="false" name="datumtransakcije" nullable="0" physicalName="datumtransakcije" precision="13" referenceCount="1" scale="0" sourceDataTypeName="date" type="91" >
+        <remarks></remarks>
+       </column>
+       </folder>
+       <folder id="FOLTAB1233" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+       </folder>
+       <folder id="FOLTAB1232" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+       </folder>
+       <folder id="FOLTAB1234" populated="true" name="Indices" physicalName="Indices" type="4">
+       <index id="IDX130" populated="true" UUID="8158b45d-01f9-4a53-b9dc-e9dfd852417c" clustered="false" index-type="BTREE" name="stanjemagacini_pk" physicalName="stanjemagacini_pk" primaryKeyIndex="true" unique="true" >
+        <index-column id="IDC131" populated="true" UUID="51c41d67-5812-4e26-bf3a-ca3c84059421" ascendingOrDescending="UNSPECIFIED" column-ref="COL124" name="magacinskatransakcijaid" physicalName="magacinskatransakcijaid" />
+       </index>
+      </folder>
+     </table>
+     <table id="TAB132" populated="true" UUID="8c5f1649-884f-4ac0-b1b6-fb8ca580c572" name="stavkedokumenta" objectType="TABLE" physicalName="stavkedokumenta" >
+      <remarks></remarks>
+      <folder id="FOLTAB1321" populated="true" name="Columns" physicalName="Columns" type="1">
+       <column id="COL133" populated="true" UUID="aeaf5fb4-fd09-44a6-85d2-d26ac3678bce" autoIncrement="false" name="stavkaid" nullable="0" physicalName="stavkaid" precision="10" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL134" populated="true" UUID="b9c8112f-40f2-4c58-a044-8f5ebf6d5c05" autoIncrement="false" name="dokumentid" nullable="0" physicalName="dokumentid" precision="10" referenceCount="2" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL135" populated="true" UUID="115f4377-539b-4416-902b-c69b1c6d4484" autoIncrement="false" name="artikalid" nullable="0" physicalName="artikalid" precision="10" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL136" populated="true" UUID="07ccde8d-0f5d-4dcb-bd9d-2d95ec217e69" autoIncrement="false" name="kolicina" nullable="0" physicalName="kolicina" precision="308" referenceCount="1" scale="17" sourceDataTypeName="float8" type="8" >
+        <remarks></remarks>
+       </column>
+       <column id="COL137" populated="true" UUID="4ea1b912-5a42-4ee3-ac9c-89dd79027c95" autoIncrement="false" name="cijena" nullable="0" physicalName="cijena" precision="308" referenceCount="1" scale="17" sourceDataTypeName="float8" type="8" >
+        <remarks></remarks>
+       </column>
+       <column id="COL138" populated="true" UUID="450e6a5f-c65b-430b-b2c5-f3b60028d59f" autoIncrement="false" name="popust" nullable="0" physicalName="popust" precision="308" referenceCount="1" scale="17" sourceDataTypeName="float8" type="8" >
+        <remarks></remarks>
+       </column>
+       <column id="COL139" populated="true" UUID="7e5b0708-7e4f-4bab-a75f-7bd7e6ae75c0" autoIncrement="false" name="poveznica" nullable="0" physicalName="poveznica" precision="10" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       </folder>
+       <folder id="FOLTAB1323" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+       </folder>
+       <folder id="FOLTAB1322" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+       </folder>
+       <folder id="FOLTAB1324" populated="true" name="Indices" physicalName="Indices" type="4">
+       <index id="IDX140" populated="true" UUID="329c32a1-3e7a-4223-97bd-92bc59066d96" clustered="false" index-type="BTREE" name="dokumentistavke_pk" physicalName="dokumentistavke_pk" primaryKeyIndex="true" unique="true" >
+        <index-column id="IDC141" populated="true" UUID="0baa50f8-b32e-4012-adac-e4297cc437fd" ascendingOrDescending="UNSPECIFIED" column-ref="COL133" name="stavkaid" physicalName="stavkaid" />
+       </index>
+      </folder>
+     </table>
+     <table id="TAB142" populated="true" UUID="749c9113-7639-4519-9cbe-452d3d3dacba" name="stavkestanjemagacina" objectType="TABLE" physicalName="stavkestanjemagacina" >
+      <remarks></remarks>
+      <folder id="FOLTAB1421" populated="true" name="Columns" physicalName="Columns" type="1">
+       <column id="COL143" populated="true" UUID="3e84abeb-4db9-4d3d-b799-2a80875b5651" autoIncrement="false" name="stavkaid" nullable="0" physicalName="stavkaid" precision="10" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL144" populated="true" UUID="b5cc6545-f663-4c54-b5da-61a3d8054ec4" autoIncrement="false" name="magacinskatransakcijaid" nullable="0" physicalName="magacinskatransakcijaid" precision="10" referenceCount="2" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL145" populated="true" UUID="9413f7e6-bec0-4bc1-a69a-d6bb5013a306" autoIncrement="false" name="kolicina" nullable="0" physicalName="kolicina" precision="308" referenceCount="1" scale="17" sourceDataTypeName="float8" type="8" >
+        <remarks></remarks>
+       </column>
+       <column id="COL146" populated="true" UUID="ad27174f-018e-4cbb-a35c-753659d20870" autoIncrement="false" name="artikalid" nullable="0" physicalName="artikalid" precision="10" referenceCount="1" scale="0" sourceDataTypeName="int4" type="4" >
+        <remarks></remarks>
+       </column>
+       <column id="COL147" populated="true" UUID="3d16cadb-954f-493d-be76-23ca455df88e" autoIncrement="false" name="cijena" nullable="0" physicalName="cijena" precision="308" referenceCount="1" scale="17" sourceDataTypeName="float8" type="8" >
+        <remarks></remarks>
+       </column>
+       </folder>
+       <folder id="FOLTAB1423" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+       </folder>
+       <folder id="FOLTAB1422" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+       </folder>
+       <folder id="FOLTAB1424" populated="true" name="Indices" physicalName="Indices" type="4">
+       <index id="IDX148" populated="true" UUID="2fa70313-774a-473d-95df-73ebfdef6fb2" clustered="false" index-type="BTREE" name="stavkestanjemagacina_pk" physicalName="stavkestanjemagacina_pk" primaryKeyIndex="true" unique="true" >
+        <index-column id="IDC149" populated="true" UUID="46645158-1b1c-4b45-bd6a-50a7f341388c" ascendingOrDescending="UNSPECIFIED" column-ref="COL143" name="stavkaid" physicalName="stavkaid" />
+       </index>
+      </folder>
+     </table>
+    </schema>
+   </catalog>
+   <relationships>
+    <relationship id="REL150" populated="true" UUID="264b4f60-825e-41bf-bacb-2f4253912f7f" deferrability="7" deleteRule="3" fk-table-ref="TAB59" fkCardinality="7" identifying="false" name="ima_sjedi_te_u" physicalName="ima_sjedi_te_u" pk-table-ref="TAB6" pkCardinality="2" updateRule="0" >
+     <column-mapping id="CMP151" populated="true" UUID="7d6dcc46-5667-40a1-97c7-239ecf084877" fk-column-ref="COL62" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL7" />
+    </relationship>
+    <relationship id="REL152" populated="true" UUID="82d48c25-6189-4242-b21d-470f6637c193" deferrability="7" deleteRule="3" fk-table-ref="TAB94" fkCardinality="7" identifying="false" name="proizvodi_fk" physicalName="proizvodi_fk" pk-table-ref="TAB14" pkCardinality="2" updateRule="0" >
+     <column-mapping id="CMP153" populated="true" UUID="f7ce9256-d745-4463-acc6-07d44e744a66" fk-column-ref="COL95" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL15" />
+    </relationship>
+    <relationship id="REL154" populated="true" UUID="9c596684-8a90-4d7f-8037-f4ae31a80cfa" deferrability="7" deleteRule="3" fk-table-ref="TAB115" fkCardinality="7" identifying="false" name="roba_fk" physicalName="roba_fk" pk-table-ref="TAB14" pkCardinality="2" updateRule="0" >
+     <column-mapping id="CMP155" populated="true" UUID="0b513871-2566-4c78-9f61-94da579f2fb8" fk-column-ref="COL116" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL15" />
+    </relationship>
+    <relationship id="REL156" populated="true" UUID="ccfc12ef-8a06-48e6-abe6-3638c11684de" deferrability="7" deleteRule="3" fk-table-ref="TAB119" fkCardinality="7" identifying="false" name="sirovine_fk" physicalName="sirovine_fk" pk-table-ref="TAB14" pkCardinality="2" updateRule="0" >
+     <column-mapping id="CMP157" populated="true" UUID="9919b1e0-7ed7-4875-8e93-41c473c1258f" fk-column-ref="COL120" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL15" />
+    </relationship>
+    <relationship id="REL158" populated="true" UUID="f620a8f7-8ede-4382-aafd-cf5135dd7cfd" deferrability="7" deleteRule="3" fk-table-ref="TAB14" fkCardinality="7" identifying="false" name="nabavljeni_od" physicalName="nabavljeni_od" pk-table-ref="TAB21" pkCardinality="2" updateRule="0" >
+     <column-mapping id="CMP159" populated="true" UUID="6867dafd-a8d6-40df-8ff4-7d997940f797" fk-column-ref="COL18" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL22" />
+    </relationship>
+    <relationship id="REL160" populated="true" UUID="6b2de054-59f6-47b8-bdbd-346f3fc0a7e8" deferrability="7" deleteRule="3" fk-table-ref="TAB41" fkCardinality="7" identifying="false" name="fakturedobavljaca_fk" physicalName="fakturedobavljaca_fk" pk-table-ref="TAB26" pkCardinality="2" updateRule="0" >
+     <column-mapping id="CMP161" populated="true" UUID="7d30d86b-e780-4853-929a-553cc24a7056" fk-column-ref="COL42" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL27" />
+    </relationship>
+    <relationship id="REL162" populated="true" UUID="ea0bf0aa-3b41-4f52-97d4-87077d29fad1" deferrability="7" deleteRule="3" fk-table-ref="TAB65" fkCardinality="7" identifying="false" name="unos_je_izvrsio" physicalName="unos_je_izvrsio" pk-table-ref="TAB26" pkCardinality="2" updateRule="0" >
+     <column-mapping id="CMP163" populated="true" UUID="f25a7a40-46b9-48b8-b50e-c3db3745c85d" fk-column-ref="COL70" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL27" />
+    </relationship>
+    <relationship id="REL164" populated="true" UUID="6f5f24d3-80c9-48eb-b4c2-2a282dd4fbed" deferrability="7" deleteRule="3" fk-table-ref="TAB83" fkCardinality="7" identifying="false" name="narudzbedobavljacima_fk" physicalName="narudzbedobavljacima_fk" pk-table-ref="TAB26" pkCardinality="2" updateRule="0" >
+     <column-mapping id="CMP165" populated="true" UUID="c1e009b7-f8b8-41f4-b9b4-bed9a3c9595b" fk-column-ref="COL84" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL27" />
+    </relationship>
+    <relationship id="REL166" populated="true" UUID="eb1953ec-b483-429e-a8fc-fe2bcfdc7bb8" deferrability="7" deleteRule="3" fk-table-ref="TAB89" fkCardinality="7" identifying="false" name="ponudedobavljaca_fk" physicalName="ponudedobavljaca_fk" pk-table-ref="TAB26" pkCardinality="2" updateRule="0" >
+     <column-mapping id="CMP167" populated="true" UUID="ed8fba3f-7820-4467-b402-84e83e277b33" fk-column-ref="COL90" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL27" />
+    </relationship>
+    <relationship id="REL168" populated="true" UUID="4cf75331-6834-4e5c-9504-8104eef2bc72" deferrability="7" deleteRule="3" fk-table-ref="TAB104" fkCardinality="7" identifying="false" name="racunikupci_fk" physicalName="racunikupci_fk" pk-table-ref="TAB26" pkCardinality="2" updateRule="0" >
+     <column-mapping id="CMP169" populated="true" UUID="45558131-2178-46ac-a0c4-2d11fa3a65b8" fk-column-ref="COL105" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL27" />
+    </relationship>
+    <relationship id="REL170" populated="true" UUID="c27d1575-f03d-4b5b-a303-091091f66942" deferrability="7" deleteRule="3" fk-table-ref="TAB109" fkCardinality="7" identifying="false" name="radninalozi_fk" physicalName="radninalozi_fk" pk-table-ref="TAB26" pkCardinality="2" updateRule="0" >
+     <column-mapping id="CMP171" populated="true" UUID="4a59bc28-da3e-4120-8cca-2e1acfba07aa" fk-column-ref="COL110" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL27" />
+    </relationship>
+    <relationship id="REL172" populated="true" UUID="755bc872-43e3-4a19-adff-30319f2639f3" deferrability="7" deleteRule="3" fk-table-ref="TAB123" fkCardinality="7" identifying="false" name="izvorni_dokument_je" physicalName="izvorni_dokument_je" pk-table-ref="TAB26" pkCardinality="2" updateRule="0" >
+     <column-mapping id="CMP173" populated="true" UUID="8a0c5075-2168-48a1-828b-b71b4cbda6fc" fk-column-ref="COL126" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL27" />
+    </relationship>
+    <relationship id="REL174" populated="true" UUID="8fd56be8-0474-4b3d-8b9a-f87add5db5f7" deferrability="7" deleteRule="3" fk-table-ref="TAB132" fkCardinality="7" identifying="false" name="sadr_ai_stavke" physicalName="sadr_ai_stavke" pk-table-ref="TAB26" pkCardinality="2" updateRule="0" >
+     <column-mapping id="CMP175" populated="true" UUID="519728a8-8afc-41e9-beba-7dcc157195bf" fk-column-ref="COL134" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL27" />
+    </relationship>
+    <relationship id="REL176" populated="true" UUID="6d12044f-b3e1-4e35-adfe-e4d5054f14ef" deferrability="7" deleteRule="3" fk-table-ref="TAB53" fkCardinality="7" identifying="false" name="se_nalazi_u" physicalName="se_nalazi_u" pk-table-ref="TAB34" pkCardinality="2" updateRule="0" >
+     <column-mapping id="CMP177" populated="true" UUID="5ddfdbfd-70a6-4a47-ab22-dd6f47d51548" fk-column-ref="COL55" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL35" />
+    </relationship>
+    <relationship id="REL178" populated="true" UUID="2aeeb790-ab0f-47b5-bd8e-ad3cdf496965" deferrability="7" deleteRule="3" fk-table-ref="TAB6" fkCardinality="7" identifying="false" name="se_nalazi_u" physicalName="se_nalazi_u" pk-table-ref="TAB46" pkCardinality="2" updateRule="0" >
+     <column-mapping id="CMP179" populated="true" UUID="5735734c-9129-4a10-b70a-53ad99f0b891" fk-column-ref="COL8" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL47" />
+    </relationship>
+    <relationship id="REL180" populated="true" UUID="cd120df6-7691-444a-8c3e-82be74cd5093" deferrability="7" deleteRule="3" fk-table-ref="TAB46" fkCardinality="7" identifying="false" name="se_nalazi_u" physicalName="se_nalazi_u" pk-table-ref="TAB53" pkCardinality="2" updateRule="0" >
+     <column-mapping id="CMP181" populated="true" UUID="fcb222d3-fe76-4d63-b9ab-2ce2dc740289" fk-column-ref="COL48" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL54" />
+    </relationship>
+    <relationship id="REL182" populated="true" UUID="7147ad6a-b416-43c4-8e35-0bc8b2392fd1" deferrability="7" deleteRule="3" fk-table-ref="TAB21" fkCardinality="7" identifying="false" name="dobavljaci_fk" physicalName="dobavljaci_fk" pk-table-ref="TAB59" pkCardinality="2" updateRule="0" >
+     <column-mapping id="CMP183" populated="true" UUID="d2cf0b77-2644-4653-ac43-a22858b1d1f9" fk-column-ref="COL22" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL60" />
+    </relationship>
+    <relationship id="REL184" populated="true" UUID="9fb8d9fd-3928-49e4-a2de-e9e0d2a9a940" deferrability="7" deleteRule="3" fk-table-ref="TAB109" fkCardinality="7" identifying="false" name="ovjerio" physicalName="ovjerio" pk-table-ref="TAB65" pkCardinality="2" updateRule="0" >
+     <column-mapping id="CMP185" populated="true" UUID="d55efa26-6f31-4411-a2ca-a7617adb23f1" fk-column-ref="COL112" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL66" />
+    </relationship>
+    <relationship id="REL186" populated="true" UUID="8e3e304d-6f33-47b1-9c52-6ec76a637354" deferrability="7" deleteRule="3" fk-table-ref="TAB123" fkCardinality="7" identifying="false" name="unos_je_izvr_io" physicalName="unos_je_izvr_io" pk-table-ref="TAB65" pkCardinality="2" updateRule="0" >
+     <column-mapping id="CMP187" populated="true" UUID="7db5697b-3ba6-47fd-8ed8-1bd87b398638" fk-column-ref="COL128" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL66" />
+    </relationship>
+    <relationship id="REL188" populated="true" UUID="b62c8791-0cc0-4032-af1d-89ac6abf4dd6" deferrability="7" deleteRule="3" fk-table-ref="TAB123" fkCardinality="7" identifying="false" name="se_odnosi_na" physicalName="se_odnosi_na" pk-table-ref="TAB78" pkCardinality="2" updateRule="0" >
+     <column-mapping id="CMP189" populated="true" UUID="d9a6effe-4d79-4613-92da-f92ab7cd806e" fk-column-ref="COL125" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL79" />
+    </relationship>
+    <relationship id="REL190" populated="true" UUID="333d8300-6caa-443b-842b-e51c17ad9da7" deferrability="7" deleteRule="3" fk-table-ref="TAB94" fkCardinality="7" identifying="false" name="proizvedeno_u" physicalName="proizvedeno_u" pk-table-ref="TAB99" pkCardinality="2" updateRule="0" >
+     <column-mapping id="CMP191" populated="true" UUID="b41c406c-59f1-4ac0-9212-a833ed222988" fk-column-ref="COL96" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL100" />
+    </relationship>
+    <relationship id="REL192" populated="true" UUID="beebb275-1f5e-4342-8f84-8817945f7d40" deferrability="7" deleteRule="3" fk-table-ref="TAB109" fkCardinality="7" identifying="false" name="realizuje_se_u" physicalName="realizuje_se_u" pk-table-ref="TAB99" pkCardinality="2" updateRule="0" >
+     <column-mapping id="CMP193" populated="true" UUID="3d5e08f5-934a-4eb5-a610-d92e299c450e" fk-column-ref="COL111" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL100" />
+    </relationship>
+    <relationship id="REL194" populated="true" UUID="23ed6660-4d69-4e5d-9bf2-7f4d894d89bc" deferrability="7" deleteRule="3" fk-table-ref="TAB142" fkCardinality="7" identifying="false" name="sadr_i_stavke" physicalName="sadr_i_stavke" pk-table-ref="TAB123" pkCardinality="2" updateRule="0" >
+     <column-mapping id="CMP195" populated="true" UUID="0967e66e-2602-426d-a034-c6b5630c7462" fk-column-ref="COL144" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL124" />
+    </relationship>
+   </relationships>
+  </database>
+ </source-databases>
+ <target-database id="ppdb" dbcs-ref="DS0">
+  <table id="TAB197" populated="true" UUID="1035b275-8094-4acd-a055-0a4fee0709bc" name="radninalozi" objectType="TABLE" physicalName="radninalozi" >
+   <remarks></remarks>
+   <folder id="FOLTAB1971" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL198" populated="true" UUID="e4787cd2-e319-4b33-9ef9-f8b19b3563ac" autoIncrement="false" defaultValue="" name="dokumentid" nullable="0" physicalName="dokumentid" precision="0" primaryKeySeq="0" referenceCount="2" scale="0" source-column-ref="COL110" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL199" populated="true" UUID="20f719bd-0256-4134-a297-c48bcaf46ad9" autoIncrement="false" defaultValue="" name="proizvodnipogonid" nullable="0" physicalName="proizvodnipogonid" precision="0" referenceCount="2" scale="0" source-column-ref="COL111" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL200" populated="true" UUID="e0084095-8f7c-44fc-8bc8-00f60d5444fc" autoIncrement="false" defaultValue="" name="ovlastenoliceid" nullable="0" physicalName="ovlastenoliceid" precision="0" referenceCount="2" scale="0" source-column-ref="COL112" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB1973" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB1972" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB1974" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX201" populated="true" UUID="03b61240-8dcf-41ef-a35d-f817bdebd6e8" clustered="false" index-type="BTREE" name="radninalozi_pk" physicalName="radninalozi_pk" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC202" populated="true" UUID="6cb45b0e-8716-4db4-a73b-ea39ffce5d11" ascendingOrDescending="UNSPECIFIED" column-ref="COL198" name="dokumentid" physicalName="dokumentid" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB203" populated="true" UUID="174fe1a2-8433-4c9b-ad60-75fe2983f678" name="kantoni" objectType="TABLE" physicalName="kantoni" >
+   <remarks></remarks>
+   <folder id="FOLTAB2031" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL204" populated="true" UUID="2cd4ff9b-6268-42f8-8f5a-4ab56aa8007b" autoIncrement="false" defaultValue="" name="kantonid" nullable="0" physicalName="kantonid" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" source-column-ref="COL54" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL205" populated="true" UUID="f0a0df16-b9f8-4f62-b538-bd7e2e751d42" autoIncrement="false" defaultValue="" name="drzavaid" nullable="0" physicalName="drzavaid" precision="0" referenceCount="2" scale="0" source-column-ref="COL55" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL206" populated="true" UUID="c3542b93-d857-43eb-9a94-5863e8f94c5f" autoIncrement="false" defaultValue="" name="naziv" nullable="0" physicalName="naziv" precision="100" referenceCount="1" scale="0" source-column-ref="COL56" sourceDataTypeName="bpchar" type="1" userDefinedTypeUUID="67ddc63f-5541-4dd1-9236-632d9d155e80" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB2033" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB2032" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB2034" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX207" populated="true" UUID="f82640fb-6856-4d1c-b1d4-8904005ca666" clustered="false" index-type="BTREE" name="konatoni_1_pk" physicalName="konatoni_1_pk" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC208" populated="true" UUID="f22016df-2dab-421d-8e7e-c5805afc7fed" ascendingOrDescending="UNSPECIFIED" column-ref="COL204" name="kantonid" physicalName="kantonid" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB209" populated="true" UUID="41daa6b4-3d25-457f-9f6b-1e795b69687c" name="dokumenti" objectType="TABLE" physicalName="dokumenti" >
+   <remarks></remarks>
+   <folder id="FOLTAB2091" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL210" populated="true" UUID="d197072f-183f-4ae0-a318-2812ac05e180" autoIncrement="false" defaultValue="" name="dokumentid" nullable="0" physicalName="dokumentid" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" source-column-ref="COL27" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL211" populated="true" UUID="3abb36dd-289a-48da-ba63-5d536474b157" autoIncrement="false" defaultValue="" name="datumdokumenta" nullable="0" physicalName="datumdokumenta" precision="0" referenceCount="1" scale="0" source-column-ref="COL28" sourceDataTypeName="date" type="91" userDefinedTypeUUID="ee349be3-6af2-46e1-b305-975f5354b009" >
+     <remarks></remarks>
+    </column>
+    <column id="COL212" populated="true" UUID="88e02003-db1a-4221-b759-fc16420a432f" autoIncrement="false" defaultValue="" name="opis" nullable="0" physicalName="opis" precision="200" referenceCount="1" scale="0" source-column-ref="COL29" sourceDataTypeName="bpchar" type="1" userDefinedTypeUUID="67ddc63f-5541-4dd1-9236-632d9d155e80" >
+     <remarks></remarks>
+    </column>
+    <column id="COL213" populated="true" UUID="a0959b42-94b6-445f-8a55-8dfafe8bb5ab" autoIncrement="false" defaultValue="" name="brojdokumenta" nullable="0" physicalName="brojdokumenta" precision="50" referenceCount="1" scale="0" source-column-ref="COL30" sourceDataTypeName="bpchar" type="1" userDefinedTypeUUID="67ddc63f-5541-4dd1-9236-632d9d155e80" >
+     <remarks></remarks>
+    </column>
+    <column id="COL214" populated="true" UUID="914f7b7a-91eb-4147-92a8-08d46e3e2d28" autoIncrement="false" defaultValue="" name="klijentid" nullable="0" physicalName="klijentid" precision="0" referenceCount="1" scale="0" source-column-ref="COL31" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB2093" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB2092" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB2094" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX215" populated="true" UUID="e9757911-ddc7-4903-b24b-6ddf78e97db8" clustered="false" index-type="BTREE" name="dokumenti_pk" physicalName="dokumenti_pk" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC216" populated="true" UUID="582edced-5a38-4d0f-b722-ab9e0682bfcc" ascendingOrDescending="UNSPECIFIED" column-ref="COL210" name="dokumentid" physicalName="dokumentid" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB217" populated="true" UUID="35291a98-b160-4985-a976-38c9a43f3571" name="stanjemagacini" objectType="TABLE" physicalName="stanjemagacini" >
+   <remarks></remarks>
+   <folder id="FOLTAB2171" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL218" populated="true" UUID="3302aadc-e962-4306-bab3-5ad31ba0017d" autoIncrement="false" defaultValue="" name="magacinskatransakcijaid" nullable="0" physicalName="magacinskatransakcijaid" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" source-column-ref="COL124" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL219" populated="true" UUID="ce959008-5c5f-4088-aaa6-f9272c9f24b0" autoIncrement="false" defaultValue="" name="magacinid" nullable="0" physicalName="magacinid" precision="0" referenceCount="2" scale="0" source-column-ref="COL125" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL220" populated="true" UUID="29d6cecb-d1fe-4540-92b6-751ef01f0521" autoIncrement="false" defaultValue="" name="dokumentid" nullable="0" physicalName="dokumentid" precision="0" referenceCount="2" scale="0" source-column-ref="COL126" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL221" populated="true" UUID="a7d1d200-65c2-4619-ae8d-280222de588c" autoIncrement="false" defaultValue="" name="opistransakcije" nullable="0" physicalName="opistransakcije" precision="200" referenceCount="1" scale="0" source-column-ref="COL127" sourceDataTypeName="bpchar" type="1" userDefinedTypeUUID="67ddc63f-5541-4dd1-9236-632d9d155e80" >
+     <remarks></remarks>
+    </column>
+    <column id="COL222" populated="true" UUID="36d6aeef-3107-4699-b9cb-963b54a1184c" autoIncrement="false" defaultValue="" name="korisnikid" nullable="0" physicalName="korisnikid" precision="0" referenceCount="2" scale="0" source-column-ref="COL128" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL223" populated="true" UUID="7ad9ac0e-11b5-4796-8ba4-c2a66e6ddf52" autoIncrement="false" defaultValue="" name="datumtransakcije" nullable="0" physicalName="datumtransakcije" precision="0" referenceCount="1" scale="0" source-column-ref="COL129" sourceDataTypeName="date" type="91" userDefinedTypeUUID="ee349be3-6af2-46e1-b305-975f5354b009" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB2173" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB2172" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB2174" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX224" populated="true" UUID="c441d541-25ec-4697-803c-2fe3f49e1121" clustered="false" index-type="BTREE" name="stanjemagacini_pk" physicalName="stanjemagacini_pk" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC225" populated="true" UUID="09bb62e2-de9a-4834-9b11-b1dac177e06a" ascendingOrDescending="UNSPECIFIED" column-ref="COL218" name="magacinskatransakcijaid" physicalName="magacinskatransakcijaid" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB226" populated="true" UUID="7e9db1e8-1b71-44b6-b7cb-2d216aa9f614" name="magacini" objectType="TABLE" physicalName="magacini" >
+   <remarks></remarks>
+   <folder id="FOLTAB2261" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL227" populated="true" UUID="d09647a4-901a-4cd7-bb98-ac9f194ccadf" autoIncrement="false" defaultValue="" name="magacinid" nullable="0" physicalName="magacinid" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" source-column-ref="COL79" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL228" populated="true" UUID="18cba461-6dd0-41d9-b55b-ed2c4d52c4b0" autoIncrement="false" defaultValue="" name="nazivmagacina" nullable="0" physicalName="nazivmagacina" precision="50" referenceCount="1" scale="0" source-column-ref="COL80" sourceDataTypeName="bpchar" type="1" userDefinedTypeUUID="67ddc63f-5541-4dd1-9236-632d9d155e80" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB2263" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB2262" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB2264" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX229" populated="true" UUID="b1652835-3e0b-49ee-9275-b043e5f8ef39" clustered="false" index-type="BTREE" name="magacini_pk" physicalName="magacini_pk" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC230" populated="true" UUID="a31134c9-ec34-40a0-8a20-124469bfaa39" ascendingOrDescending="UNSPECIFIED" column-ref="COL227" name="magacinid" physicalName="magacinid" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB231" populated="true" UUID="40a76527-d260-47eb-9054-07e29d41d7bf" name="stavkedokumenta" objectType="TABLE" physicalName="stavkedokumenta" >
+   <remarks></remarks>
+   <folder id="FOLTAB2311" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL232" populated="true" UUID="f2de507f-7099-48ad-889e-5cfe8a1f3623" autoIncrement="false" defaultValue="" name="stavkaid" nullable="0" physicalName="stavkaid" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" source-column-ref="COL133" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL233" populated="true" UUID="aeb304b9-b5d9-4a96-a531-ad487e96582d" autoIncrement="false" defaultValue="" name="dokumentid" nullable="0" physicalName="dokumentid" precision="0" referenceCount="2" scale="0" source-column-ref="COL134" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL234" populated="true" UUID="942d6bf4-b12b-4266-9378-a1cd27ef675b" autoIncrement="false" defaultValue="" name="artikalid" nullable="0" physicalName="artikalid" precision="0" referenceCount="1" scale="0" source-column-ref="COL135" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL235" populated="true" UUID="6d9e4b33-47a8-4a16-8413-52d4ce2ee4c0" autoIncrement="false" defaultValue="" name="kolicina" nullable="0" physicalName="kolicina" precision="0" referenceCount="1" scale="0" source-column-ref="COL136" sourceDataTypeName="float8" type="8" userDefinedTypeUUID="4fc90970-b2e5-41dd-911c-cc605d87e7a8" >
+     <remarks></remarks>
+    </column>
+    <column id="COL236" populated="true" UUID="9be6b7ed-22bd-4b13-85e9-79739e58c980" autoIncrement="false" defaultValue="" name="cijena" nullable="0" physicalName="cijena" precision="0" referenceCount="1" scale="0" source-column-ref="COL137" sourceDataTypeName="float8" type="8" userDefinedTypeUUID="4fc90970-b2e5-41dd-911c-cc605d87e7a8" >
+     <remarks></remarks>
+    </column>
+    <column id="COL237" populated="true" UUID="c6098f17-bcc5-43ae-b4b9-ab1057a481e4" autoIncrement="false" defaultValue="" name="popust" nullable="0" physicalName="popust" precision="0" referenceCount="1" scale="0" source-column-ref="COL138" sourceDataTypeName="float8" type="8" userDefinedTypeUUID="4fc90970-b2e5-41dd-911c-cc605d87e7a8" >
+     <remarks></remarks>
+    </column>
+    <column id="COL238" populated="true" UUID="7661c900-a51e-444f-9e1a-b19e9757fef8" autoIncrement="false" defaultValue="" name="poveznica" nullable="0" physicalName="poveznica" precision="0" referenceCount="1" scale="0" source-column-ref="COL139" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB2313" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB2312" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB2314" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX239" populated="true" UUID="1a90b4ed-5d28-4328-b2ae-55613b523854" clustered="false" index-type="BTREE" name="dokumentistavke_pk" physicalName="dokumentistavke_pk" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC240" populated="true" UUID="bcea57d9-35db-45f0-abf7-0db135d4ce3d" ascendingOrDescending="UNSPECIFIED" column-ref="COL232" name="stavkaid" physicalName="stavkaid" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB241" populated="true" UUID="de33151a-06cf-4638-9f9d-f2137b178453" name="adrese" objectType="TABLE" physicalName="adrese" >
+   <remarks></remarks>
+   <folder id="FOLTAB2411" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL242" populated="true" UUID="5dc926ac-2aa9-4c88-9b3b-32481dc67643" autoIncrement="false" defaultValue="" name="adresaid" nullable="0" physicalName="adresaid" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" source-column-ref="COL7" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL243" populated="true" UUID="6f57d475-78e5-428b-bedc-ce5c615baea3" autoIncrement="false" defaultValue="" name="gradid" nullable="0" physicalName="gradid" precision="0" referenceCount="2" scale="0" source-column-ref="COL8" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL244" populated="true" UUID="36aaa0d2-48f7-4eca-aae9-1e1fc39f75b3" autoIncrement="false" defaultValue="" name="ulica" nullable="0" physicalName="ulica" precision="100" referenceCount="1" scale="0" source-column-ref="COL9" sourceDataTypeName="bpchar" type="1" userDefinedTypeUUID="67ddc63f-5541-4dd1-9236-632d9d155e80" >
+     <remarks></remarks>
+    </column>
+    <column id="COL245" populated="true" UUID="2597afc7-0d32-422a-955d-ab685e42e508" autoIncrement="false" defaultValue="" name="broj" nullable="0" physicalName="broj" precision="10" referenceCount="1" scale="0" source-column-ref="COL10" sourceDataTypeName="bpchar" type="1" userDefinedTypeUUID="67ddc63f-5541-4dd1-9236-632d9d155e80" >
+     <remarks></remarks>
+    </column>
+    <column id="COL246" populated="true" UUID="2a116549-c319-4753-924f-e26312aa4822" autoIncrement="false" defaultValue="" name="brojtelefona" nullable="0" physicalName="brojtelefona" precision="20" referenceCount="1" scale="0" source-column-ref="COL11" sourceDataTypeName="bpchar" type="1" userDefinedTypeUUID="67ddc63f-5541-4dd1-9236-632d9d155e80" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB2413" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB2412" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB2414" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX247" populated="true" UUID="35f7cf33-bef9-48cd-9a55-d95337a67453" clustered="false" index-type="BTREE" name="adrese_pk" physicalName="adrese_pk" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC248" populated="true" UUID="0eca8467-3fb1-4279-bde8-131b91642396" ascendingOrDescending="UNSPECIFIED" column-ref="COL242" name="adresaid" physicalName="adresaid" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB249" populated="true" UUID="bc03a767-092a-49e6-aec0-3ba655eb89bc" name="artikli" objectType="TABLE" physicalName="artikli" >
+   <remarks></remarks>
+   <folder id="FOLTAB2491" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL250" populated="true" UUID="c55e2fe5-1336-4b83-bd21-d7a3b2232389" autoIncrement="false" defaultValue="" name="artikalid" nullable="0" physicalName="artikalid" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" source-column-ref="COL15" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL251" populated="true" UUID="8e7fb3b9-a931-4ce4-b25a-9387f2bd60a4" autoIncrement="false" defaultValue="" name="naziv" nullable="0" physicalName="naziv" precision="100" referenceCount="1" scale="0" source-column-ref="COL16" sourceDataTypeName="bpchar" type="1" userDefinedTypeUUID="67ddc63f-5541-4dd1-9236-632d9d155e80" >
+     <remarks></remarks>
+    </column>
+    <column id="COL252" populated="true" UUID="6cec0552-c2ed-46da-9cfd-48c2a526cb3d" autoIncrement="false" defaultValue="" name="skraceninaziv" nullable="0" physicalName="skraceninaziv" precision="20" referenceCount="1" scale="0" source-column-ref="COL17" sourceDataTypeName="bpchar" type="1" userDefinedTypeUUID="67ddc63f-5541-4dd1-9236-632d9d155e80" >
+     <remarks></remarks>
+    </column>
+    <column id="COL253" populated="true" UUID="8dcaef79-ec7e-4ef6-89d5-8c69686cdb32" autoIncrement="false" defaultValue="" name="klijentid" nullable="0" physicalName="klijentid" precision="0" referenceCount="2" scale="0" source-column-ref="COL18" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB2493" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB2492" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB2494" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX254" populated="true" UUID="16d00951-7bbe-465a-836d-491ee00f3d59" clustered="false" index-type="BTREE" name="artikli_pk" physicalName="artikli_pk" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC255" populated="true" UUID="d1a402fb-5b7c-4b98-a32d-dadf0da65bbe" ascendingOrDescending="UNSPECIFIED" column-ref="COL250" name="artikalid" physicalName="artikalid" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB256" populated="true" UUID="9ccc61bf-f988-465f-8c26-3edaf87d6e63" name="klijenti" objectType="TABLE" physicalName="klijenti" >
+   <remarks></remarks>
+   <folder id="FOLTAB2561" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL257" populated="true" UUID="09ba83e2-8846-43c8-9e21-09781e1bb060" autoIncrement="false" defaultValue="" name="klijentid" nullable="0" physicalName="klijentid" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" source-column-ref="COL60" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL258" populated="true" UUID="c188cf12-1d12-4132-a3bd-0858e241bfc5" autoIncrement="false" defaultValue="" name="pdvbroj" nullable="0" physicalName="pdvbroj" precision="13" referenceCount="1" scale="0" source-column-ref="COL61" sourceDataTypeName="bpchar" type="1" userDefinedTypeUUID="67ddc63f-5541-4dd1-9236-632d9d155e80" >
+     <remarks></remarks>
+    </column>
+    <column id="COL259" populated="true" UUID="0e789eec-6247-4aa8-823a-d001ca372b17" autoIncrement="false" defaultValue="" name="adresaid" nullable="0" physicalName="adresaid" precision="0" referenceCount="2" scale="0" source-column-ref="COL62" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB2563" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB2562" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB2564" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX260" populated="true" UUID="e83afe3f-efb1-4aa6-99f2-ce625c4f3002" clustered="false" index-type="BTREE" name="klijenti_pk" physicalName="klijenti_pk" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC261" populated="true" UUID="6cf552f0-0cc2-43e1-a7f2-5d43f45c3955" ascendingOrDescending="UNSPECIFIED" column-ref="COL257" name="klijentid" physicalName="klijentid" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB262" populated="true" UUID="ebfe5a84-e80c-486a-8c12-c16678769722" name="kupci" objectType="TABLE" physicalName="kupci" >
+   <remarks></remarks>
+   <folder id="FOLTAB2621" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL263" populated="true" UUID="2f11c41a-b257-466b-83d3-84b08ec2526b" autoIncrement="false" defaultValue="" name="klijentid" nullable="0" physicalName="klijentid" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" source-column-ref="COL74" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL264" populated="true" UUID="075f28dd-5769-4ea2-860f-b1d1f58e0517" autoIncrement="false" defaultValue="" name="kooperant" nullable="0" physicalName="kooperant" precision="1" referenceCount="1" scale="0" source-column-ref="COL75" sourceDataTypeName="bpchar" type="1" userDefinedTypeUUID="67ddc63f-5541-4dd1-9236-632d9d155e80" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB2623" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB2622" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB2624" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX265" populated="true" UUID="89a2def5-4c10-413f-9404-a11b3bbe84b3" clustered="false" index-type="BTREE" name="kupci_pk" physicalName="kupci_pk" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC266" populated="true" UUID="3295294f-0896-410b-8846-d80f136fa8db" ascendingOrDescending="UNSPECIFIED" column-ref="COL263" name="klijentid" physicalName="klijentid" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB267" populated="true" UUID="8b375246-3963-44ab-acfd-1f47f3ed7d27" name="proizvodnipogoni" objectType="TABLE" physicalName="proizvodnipogoni" >
+   <remarks></remarks>
+   <folder id="FOLTAB2671" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL268" populated="true" UUID="e5e40633-696b-4811-9545-d77f7715f86e" autoIncrement="false" defaultValue="" name="proizvodnipogonid" nullable="0" physicalName="proizvodnipogonid" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" source-column-ref="COL100" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL269" populated="true" UUID="23130807-ed9f-4aa2-95e7-b44ca44c7357" autoIncrement="false" defaultValue="" name="nazivpogona" nullable="0" physicalName="nazivpogona" precision="100" referenceCount="1" scale="0" source-column-ref="COL101" sourceDataTypeName="bpchar" type="1" userDefinedTypeUUID="67ddc63f-5541-4dd1-9236-632d9d155e80" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB2673" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB2672" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB2674" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX270" populated="true" UUID="b95968b2-45a3-4b34-b3aa-5d997033ec85" clustered="false" index-type="BTREE" name="proizvodnipogoni_pk" physicalName="proizvodnipogoni_pk" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC271" populated="true" UUID="176f40ef-e83d-430c-8a23-19f877aa8ed4" ascendingOrDescending="UNSPECIFIED" column-ref="COL268" name="proizvodnipogonid" physicalName="proizvodnipogonid" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB272" populated="true" UUID="00c69283-5acb-4742-a294-5c74544dc88e" name="sirovine" objectType="TABLE" physicalName="sirovine" >
+   <remarks></remarks>
+   <folder id="FOLTAB2721" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL273" populated="true" UUID="7a1bfd35-7bd7-44a1-891b-cc6827711ae9" autoIncrement="false" defaultValue="" name="artikalid" nullable="0" physicalName="artikalid" precision="0" primaryKeySeq="0" referenceCount="2" scale="0" source-column-ref="COL120" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB2723" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB2722" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB2724" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX274" populated="true" UUID="850876c9-10ad-49da-acd8-f764fc39bd3e" clustered="false" index-type="BTREE" name="sirovine_pk" physicalName="sirovine_pk" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC275" populated="true" UUID="715405c8-e985-4444-9f33-f7cd68fee281" ascendingOrDescending="UNSPECIFIED" column-ref="COL273" name="artikalid" physicalName="artikalid" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB276" populated="true" UUID="caaf0c28-4ce8-4d3c-9e6f-d5c5f259182f" name="roba" objectType="TABLE" physicalName="roba" >
+   <remarks></remarks>
+   <folder id="FOLTAB2761" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL277" populated="true" UUID="43c744f1-bc73-4bcc-9bf7-a8467dd319f5" autoIncrement="false" defaultValue="" name="artikalid" nullable="0" physicalName="artikalid" precision="0" primaryKeySeq="0" referenceCount="2" scale="0" source-column-ref="COL116" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB2763" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB2762" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB2764" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX278" populated="true" UUID="f66ae7dc-94e2-4708-9170-4b443cc47de1" clustered="false" index-type="BTREE" name="roba_pk" physicalName="roba_pk" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC279" populated="true" UUID="7321933c-dda7-4a84-bc83-766cb81a9159" ascendingOrDescending="UNSPECIFIED" column-ref="COL277" name="artikalid" physicalName="artikalid" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB280" populated="true" UUID="39a285de-6c44-4a15-b35b-9623b8df7151" name="racunikupci" objectType="TABLE" physicalName="racunikupci" >
+   <remarks></remarks>
+   <folder id="FOLTAB2801" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL281" populated="true" UUID="3133df65-f771-4c56-ace3-40bf860b5c52" autoIncrement="false" defaultValue="" name="dokumentid" nullable="0" physicalName="dokumentid" precision="0" referenceCount="2" scale="0" source-column-ref="COL105" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL282" populated="true" UUID="96ca9513-0135-4596-8064-f02edf661b8a" autoIncrement="false" defaultValue="" name="reklamiraniracunbroj" nullable="0" physicalName="reklamiraniracunbroj" precision="50" referenceCount="1" scale="0" source-column-ref="COL106" sourceDataTypeName="bpchar" type="1" userDefinedTypeUUID="67ddc63f-5541-4dd1-9236-632d9d155e80" >
+     <remarks></remarks>
+    </column>
+    <column id="COL283" populated="true" UUID="a7ff9c85-8261-439c-9349-4b093ac21c80" autoIncrement="false" defaultValue="" name="tekstnakrajuracuna" nullable="0" physicalName="tekstnakrajuracuna" precision="200" referenceCount="1" scale="0" source-column-ref="COL107" sourceDataTypeName="bpchar" type="1" userDefinedTypeUUID="67ddc63f-5541-4dd1-9236-632d9d155e80" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB2803" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB2802" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB2804" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX284" populated="true" UUID="98c79661-d561-4b19-892e-8c8d4de609ba" clustered="false" index-type="BTREE" name="racunikupci_pk" physicalName="racunikupci_pk" primaryKeyIndex="true" unique="true" >
+    </index>
+   </folder>
+  </table>
+  <table id="TAB285" populated="true" UUID="409b852c-84f2-42fa-8540-ac922de036ee" name="ponudedobavljaca" objectType="TABLE" physicalName="ponudedobavljaca" >
+   <remarks></remarks>
+   <folder id="FOLTAB2851" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL286" populated="true" UUID="040c839a-c2df-4464-8fa6-1cfac8a83ddf" autoIncrement="false" defaultValue="" name="dokumentid" nullable="0" physicalName="dokumentid" precision="0" primaryKeySeq="0" referenceCount="2" scale="0" source-column-ref="COL90" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL287" populated="true" UUID="b4eae5fb-bb39-44d5-9d81-c162f937953f" autoIncrement="false" defaultValue="" name="usloviisporuke" nullable="0" physicalName="usloviisporuke" precision="200" referenceCount="1" scale="0" source-column-ref="COL91" sourceDataTypeName="bpchar" type="1" userDefinedTypeUUID="67ddc63f-5541-4dd1-9236-632d9d155e80" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB2853" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB2852" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB2854" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX288" populated="true" UUID="68a40c61-14e7-46e0-8b1c-82dce55cb06e" clustered="false" index-type="BTREE" name="ponudedobavljaca_pk" physicalName="ponudedobavljaca_pk" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC289" populated="true" UUID="527953a2-3e85-4987-a23c-39d9b7b41a8d" ascendingOrDescending="UNSPECIFIED" column-ref="COL286" name="dokumentid" physicalName="dokumentid" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB290" populated="true" UUID="88ecb03a-e8c2-4951-886a-d7e12c4c8e62" name="dobavljaci" objectType="TABLE" physicalName="dobavljaci" >
+   <remarks></remarks>
+   <folder id="FOLTAB2901" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL291" populated="true" UUID="a6a71675-017e-4e3e-a7a0-f3d8d691fab4" autoIncrement="false" defaultValue="" name="klijentid" nullable="0" physicalName="klijentid" precision="0" primaryKeySeq="0" referenceCount="2" scale="0" source-column-ref="COL22" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL292" populated="true" UUID="2e595165-7b38-47ec-8152-161da35e8ce4" autoIncrement="false" defaultValue="" name="stalnidobavljac" nullable="0" physicalName="stalnidobavljac" precision="1" referenceCount="1" scale="0" source-column-ref="COL23" sourceDataTypeName="bpchar" type="1" userDefinedTypeUUID="67ddc63f-5541-4dd1-9236-632d9d155e80" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB2903" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB2902" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB2904" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX293" populated="true" UUID="31b6c18d-fe62-4c23-8744-fed002fec33e" clustered="false" index-type="BTREE" name="dobavljaci_pk" physicalName="dobavljaci_pk" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC294" populated="true" UUID="8574873f-bd99-4c8b-96e0-0a9054b98230" ascendingOrDescending="UNSPECIFIED" column-ref="COL291" name="klijentid" physicalName="klijentid" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB295" populated="true" UUID="0f422f45-a5bb-402e-9236-51d35c85b830" name="fakturedobavljaca" objectType="TABLE" physicalName="fakturedobavljaca" >
+   <remarks></remarks>
+   <folder id="FOLTAB2951" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL296" populated="true" UUID="2cb7bf2c-2bb6-4ba6-929e-4494fab1ac04" autoIncrement="false" defaultValue="" name="dokumentid" nullable="0" physicalName="dokumentid" precision="0" primaryKeySeq="0" referenceCount="2" scale="0" source-column-ref="COL42" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL297" populated="true" UUID="d0f1614d-40d2-46bf-be75-788303a49f83" autoIncrement="false" defaultValue="" name="usloviplacanja" nullable="0" physicalName="usloviplacanja" precision="100" referenceCount="1" scale="0" source-column-ref="COL43" sourceDataTypeName="bpchar" type="1" userDefinedTypeUUID="67ddc63f-5541-4dd1-9236-632d9d155e80" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB2953" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB2952" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB2954" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX298" populated="true" UUID="697548c5-12d5-4928-80dd-e6d0d92f2de8" clustered="false" index-type="BTREE" name="fakturedobavljaca_pk" physicalName="fakturedobavljaca_pk" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC299" populated="true" UUID="7d434d18-5ee2-4f68-81f2-81debe454058" ascendingOrDescending="UNSPECIFIED" column-ref="COL296" name="dokumentid" physicalName="dokumentid" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB300" populated="true" UUID="82c5f6bb-dcc1-461e-bd91-f964de13ab41" name="narudzbedobavljacima" objectType="TABLE" physicalName="narudzbedobavljacima" >
+   <remarks></remarks>
+   <folder id="FOLTAB3001" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL301" populated="true" UUID="8fd88eda-a688-4285-8b41-ebb6748b1eac" autoIncrement="false" defaultValue="" name="dokumentid" nullable="0" physicalName="dokumentid" precision="0" primaryKeySeq="0" referenceCount="2" scale="0" source-column-ref="COL84" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL302" populated="true" UUID="79d27e98-90ea-4682-94b2-8ae1a1eac0f1" autoIncrement="false" defaultValue="" name="vezaponudadobavljaca" nullable="0" physicalName="vezaponudadobavljaca" precision="0" referenceCount="1" scale="0" source-column-ref="COL85" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL303" populated="true" UUID="66d1925c-0070-4fe8-8ba2-601c93caa1b0" autoIncrement="false" defaultValue="" name="dodatnenapomene" nullable="0" physicalName="dodatnenapomene" precision="200" referenceCount="1" scale="0" source-column-ref="COL86" sourceDataTypeName="bpchar" type="1" userDefinedTypeUUID="67ddc63f-5541-4dd1-9236-632d9d155e80" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB3003" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB3002" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB3004" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX304" populated="true" UUID="47f3e976-fa4c-4983-9db3-50fafd2fa468" clustered="false" index-type="BTREE" name="narudzbedobavljacima_pk" physicalName="narudzbedobavljacima_pk" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC305" populated="true" UUID="c97116c2-794c-4607-b5e5-f1e68d61006b" ascendingOrDescending="UNSPECIFIED" column-ref="COL301" name="dokumentid" physicalName="dokumentid" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB306" populated="true" UUID="1fbb7df0-7449-4627-99d9-605895a378c3" name="drzave" objectType="TABLE" physicalName="drzave" >
+   <remarks></remarks>
+   <folder id="FOLTAB3061" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL307" populated="true" UUID="1c59ec0a-07a4-4923-b52f-a8721f1750f2" autoIncrement="false" defaultValue="" name="drzavaid" nullable="0" physicalName="drzavaid" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" source-column-ref="COL35" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL308" populated="true" UUID="416d9fa6-688d-4d58-9a51-a0c843d6fd6e" autoIncrement="false" defaultValue="" name="oznaka" nullable="0" physicalName="oznaka" precision="2" referenceCount="1" scale="0" source-column-ref="COL36" sourceDataTypeName="bpchar" type="1" userDefinedTypeUUID="67ddc63f-5541-4dd1-9236-632d9d155e80" >
+     <remarks></remarks>
+    </column>
+    <column id="COL309" populated="true" UUID="ddab4277-704b-4019-a134-a8c49021d327" autoIncrement="false" defaultValue="" name="oznakavaluta" nullable="0" physicalName="oznakavaluta" precision="3" referenceCount="1" scale="0" source-column-ref="COL37" sourceDataTypeName="bpchar" type="1" userDefinedTypeUUID="67ddc63f-5541-4dd1-9236-632d9d155e80" >
+     <remarks></remarks>
+    </column>
+    <column id="COL310" populated="true" UUID="b8d9153f-d0a0-4fdf-ae5f-d4ed09ad8d2a" autoIncrement="false" defaultValue="" name="naziv" nullable="0" physicalName="naziv" precision="100" referenceCount="1" scale="0" source-column-ref="COL38" sourceDataTypeName="bpchar" type="1" userDefinedTypeUUID="67ddc63f-5541-4dd1-9236-632d9d155e80" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB3063" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB3062" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB3064" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX311" populated="true" UUID="e744ffb0-4251-4f50-83ea-39001e3b5aac" clustered="false" index-type="BTREE" name="drzave_1_pk" physicalName="drzave_1_pk" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC312" populated="true" UUID="91bf0bab-4589-4cf7-bd15-4f94a8bdd4ea" ascendingOrDescending="UNSPECIFIED" column-ref="COL307" name="drzavaid" physicalName="drzavaid" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB313" populated="true" UUID="213a9fc8-bde0-4f13-affc-73d1d5d33382" name="stavkestanjemagacina" objectType="TABLE" physicalName="stavkestanjemagacina" >
+   <remarks></remarks>
+   <folder id="FOLTAB3131" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL314" populated="true" UUID="54609142-4b63-48b7-89fe-860bf9c9e115" autoIncrement="false" defaultValue="" name="stavkaid" nullable="0" physicalName="stavkaid" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" source-column-ref="COL143" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL315" populated="true" UUID="f44b26d5-cb34-491e-a5ab-ae0cbe9d3114" autoIncrement="false" defaultValue="" name="magacinskatransakcijaid" nullable="0" physicalName="magacinskatransakcijaid" precision="0" referenceCount="2" scale="0" source-column-ref="COL144" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL316" populated="true" UUID="d7cf613a-7818-45fe-966e-21b8df726dd8" autoIncrement="false" defaultValue="" name="kolicina" nullable="0" physicalName="kolicina" precision="0" referenceCount="1" scale="0" source-column-ref="COL145" sourceDataTypeName="float8" type="8" userDefinedTypeUUID="4fc90970-b2e5-41dd-911c-cc605d87e7a8" >
+     <remarks></remarks>
+    </column>
+    <column id="COL317" populated="true" UUID="2b355a78-6b76-4278-b0a6-9a0d108ec7e1" autoIncrement="false" defaultValue="" name="artikalid" nullable="0" physicalName="artikalid" precision="0" referenceCount="1" scale="0" source-column-ref="COL146" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL318" populated="true" UUID="6dbbbf30-b4dc-4c09-ae39-74656b1a3374" autoIncrement="false" defaultValue="" name="cijena" nullable="0" physicalName="cijena" precision="0" referenceCount="1" scale="0" source-column-ref="COL147" sourceDataTypeName="float8" type="8" userDefinedTypeUUID="4fc90970-b2e5-41dd-911c-cc605d87e7a8" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB3133" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB3132" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB3134" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX319" populated="true" UUID="8d81e68f-cd85-4392-a561-136715e9b0b0" clustered="false" index-type="BTREE" name="stavkestanjemagacina_pk" physicalName="stavkestanjemagacina_pk" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC320" populated="true" UUID="1813e117-7789-4ce6-b5a3-8fd7db2c09ce" ascendingOrDescending="UNSPECIFIED" column-ref="COL314" name="stavkaid" physicalName="stavkaid" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB321" populated="true" UUID="795d1f29-b5dd-451f-9f2d-7a676ccf83c9" name="korisnici" objectType="TABLE" physicalName="korisnici" >
+   <remarks></remarks>
+   <folder id="FOLTAB3211" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL322" populated="true" UUID="539e1a24-22e0-44e8-87e2-486479361c7b" autoIncrement="false" defaultValue="" name="korisnikid" nullable="0" physicalName="korisnikid" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" source-column-ref="COL66" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL323" populated="true" UUID="8f0b968a-f605-4885-b2fc-ec9801aa9542" autoIncrement="false" defaultValue="" name="korisnikime" nullable="0" physicalName="korisnikime" precision="50" referenceCount="1" scale="0" source-column-ref="COL67" sourceDataTypeName="bpchar" type="1" userDefinedTypeUUID="67ddc63f-5541-4dd1-9236-632d9d155e80" >
+     <remarks></remarks>
+    </column>
+    <column id="COL324" populated="true" UUID="afd26d2a-06c1-4dc5-8e55-87a5e613c2fb" autoIncrement="false" defaultValue="" name="korisniklozinka" nullable="0" physicalName="korisniklozinka" precision="50" referenceCount="1" scale="0" source-column-ref="COL68" sourceDataTypeName="bpchar" type="1" userDefinedTypeUUID="67ddc63f-5541-4dd1-9236-632d9d155e80" >
+     <remarks></remarks>
+    </column>
+    <column id="COL325" populated="true" UUID="be6408cd-5d09-4867-b593-f977f18c6df6" autoIncrement="false" defaultValue="" name="email" nullable="0" physicalName="email" precision="100" referenceCount="1" scale="0" source-column-ref="COL69" sourceDataTypeName="bpchar" type="1" userDefinedTypeUUID="67ddc63f-5541-4dd1-9236-632d9d155e80" >
+     <remarks></remarks>
+    </column>
+    <column id="COL326" populated="true" UUID="937b7dc9-c662-4cc7-8d7d-770a22dddb44" autoIncrement="false" defaultValue="" name="dokumentid" nullable="0" physicalName="dokumentid" precision="0" referenceCount="2" scale="0" source-column-ref="COL70" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB3213" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB3212" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB3214" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX327" populated="true" UUID="1564b2b8-9199-4cc8-aa20-bf5fc391244c" clustered="false" index-type="BTREE" name="korisnici_pk" physicalName="korisnici_pk" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC328" populated="true" UUID="0b8b1811-7e14-4831-8541-fb25fe765dd3" ascendingOrDescending="UNSPECIFIED" column-ref="COL322" name="korisnikid" physicalName="korisnikid" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB329" populated="true" UUID="75020c0c-96b7-40fe-bf7d-bc63f9aaa705" name="proizvodi" objectType="TABLE" physicalName="proizvodi" >
+   <remarks></remarks>
+   <folder id="FOLTAB3291" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL330" populated="true" UUID="0b911a09-301d-4d33-8e79-5c4b81ebbfab" autoIncrement="false" defaultValue="" name="artikalid" nullable="0" physicalName="artikalid" precision="0" primaryKeySeq="0" referenceCount="2" scale="0" source-column-ref="COL95" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL331" populated="true" UUID="8dd14bf6-26f0-48f3-afb9-0ca9091b46e2" autoIncrement="false" defaultValue="" name="proizvodnipogonid" nullable="0" physicalName="proizvodnipogonid" precision="0" referenceCount="2" scale="0" source-column-ref="COL96" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB3293" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB3292" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB3294" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX332" populated="true" UUID="a2791f65-e346-416a-9032-d203920c8624" clustered="false" index-type="BTREE" name="proizvodi_pk" physicalName="proizvodi_pk" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC333" populated="true" UUID="cafcbd50-0e33-438d-be05-0d4536103a34" ascendingOrDescending="UNSPECIFIED" column-ref="COL330" name="artikalid" physicalName="artikalid" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB334" populated="true" UUID="3e84fd48-c01c-42bb-bb60-b3f2eeba5200" name="gradovi" objectType="TABLE" physicalName="gradovi" >
+   <remarks></remarks>
+   <folder id="FOLTAB3341" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL335" populated="true" UUID="e4890cef-4c60-4743-ae10-23a39cbbd58a" autoIncrement="false" defaultValue="" name="gradid" nullable="0" physicalName="gradid" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" source-column-ref="COL47" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL336" populated="true" UUID="70ecddc2-505f-4e02-9586-b002154a9f13" autoIncrement="false" defaultValue="" name="kanttonid" nullable="0" physicalName="kanttonid" precision="0" referenceCount="2" scale="0" source-column-ref="COL48" sourceDataTypeName="int4" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL337" populated="true" UUID="e2efa676-78f0-4a07-8b38-89531496ba5c" autoIncrement="false" defaultValue="" name="ptt" nullable="0" physicalName="ptt" precision="6" referenceCount="1" scale="0" source-column-ref="COL49" sourceDataTypeName="bpchar" type="1" userDefinedTypeUUID="67ddc63f-5541-4dd1-9236-632d9d155e80" >
+     <remarks></remarks>
+    </column>
+    <column id="COL338" populated="true" UUID="7fd00a42-ec89-45d5-8ffa-4520daabdf6f" autoIncrement="false" defaultValue="" name="naziv" nullable="0" physicalName="naziv" precision="100" referenceCount="1" scale="0" source-column-ref="COL50" sourceDataTypeName="bpchar" type="1" userDefinedTypeUUID="67ddc63f-5541-4dd1-9236-632d9d155e80" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB3343" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB3342" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB3344" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX339" populated="true" UUID="5e49b17d-764b-4eac-a2c2-4f27869c9e53" clustered="false" index-type="BTREE" name="gradovi_1_pk" physicalName="gradovi_1_pk" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC340" populated="true" UUID="4e82e0ea-9d06-4263-87ab-c01c97a638af" ascendingOrDescending="UNSPECIFIED" column-ref="COL335" name="gradid" physicalName="gradid" />
+    </index>
+   </folder>
+  </table>
+  <relationships>
+   <relationship id="REL341" populated="true" UUID="8f27d078-571c-4a78-b501-2d9ce10295e8" deferrability="7" deleteRule="3" fk-table-ref="TAB334" fkCardinality="7" identifying="false" name="se_nalazi_u" physicalName="se_nalazi_u" pk-table-ref="TAB203" pkCardinality="2" updateRule="0" >
+    <column-mapping id="CMP342" populated="true" UUID="4b3a9e26-301f-4014-acde-825c11e3d204" fk-column-ref="COL336" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL204" />
+   </relationship>
+   <relationship id="REL343" populated="true" UUID="1de083cb-dec0-40b3-8dba-3216b5dd4747" deferrability="7" deleteRule="3" fk-table-ref="TAB197" fkCardinality="7" identifying="true" name="radninalozi_fk" physicalName="radninalozi_fk" pk-table-ref="TAB209" pkCardinality="2" updateRule="0" >
+    <column-mapping id="CMP344" populated="true" UUID="d1f51192-ca5a-408f-a6cc-43ba4175de7e" fk-column-ref="COL198" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL210" />
+   </relationship>
+   <relationship id="REL345" populated="true" UUID="db6b1146-0935-4a5a-9c20-c96614222e37" deferrability="7" deleteRule="3" fk-table-ref="TAB217" fkCardinality="7" identifying="false" name="izvorni_dokument_je" physicalName="izvorni_dokument_je" pk-table-ref="TAB209" pkCardinality="2" updateRule="0" >
+    <column-mapping id="CMP346" populated="true" UUID="63a79245-e05a-4e9a-822f-a4c31bf954a3" fk-column-ref="COL220" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL210" />
+   </relationship>
+   <relationship id="REL347" populated="true" UUID="fe81daa8-a8c4-4ab0-a9d9-10edb23f4c27" deferrability="7" deleteRule="3" fk-table-ref="TAB231" fkCardinality="7" identifying="false" name="sadr_ai_stavke" physicalName="sadr_ai_stavke" pk-table-ref="TAB209" pkCardinality="2" updateRule="0" >
+    <column-mapping id="CMP348" populated="true" UUID="e355d7b6-88f0-46ca-85b6-36b76ad89962" fk-column-ref="COL233" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL210" />
+   </relationship>
+   <relationship id="REL349" populated="true" UUID="e2fc83e7-b9d1-4073-a358-f4f5794ac42f" deferrability="7" deleteRule="3" fk-table-ref="TAB280" fkCardinality="7" identifying="false" name="racunikupci_fk" physicalName="racunikupci_fk" pk-table-ref="TAB209" pkCardinality="2" updateRule="0" >
+    <column-mapping id="CMP350" populated="true" UUID="dd7dc66d-aa20-4cca-9fc7-7e803cbc7d99" fk-column-ref="COL281" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL210" />
+   </relationship>
+   <relationship id="REL351" populated="true" UUID="c8dbb3c7-884c-4bc6-8e3b-2521cf9bec57" deferrability="7" deleteRule="3" fk-table-ref="TAB285" fkCardinality="7" identifying="true" name="ponudedobavljaca_fk" physicalName="ponudedobavljaca_fk" pk-table-ref="TAB209" pkCardinality="2" updateRule="0" >
+    <column-mapping id="CMP352" populated="true" UUID="85610797-f456-427b-8f4a-e1e6622b9280" fk-column-ref="COL286" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL210" />
+   </relationship>
+   <relationship id="REL353" populated="true" UUID="639939ba-4091-4b30-8c1d-80c8823792c7" deferrability="7" deleteRule="3" fk-table-ref="TAB295" fkCardinality="7" identifying="true" name="fakturedobavljaca_fk" physicalName="fakturedobavljaca_fk" pk-table-ref="TAB209" pkCardinality="2" updateRule="0" >
+    <column-mapping id="CMP354" populated="true" UUID="f69b8987-23b0-45fc-84c1-b8164775a715" fk-column-ref="COL296" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL210" />
+   </relationship>
+   <relationship id="REL355" populated="true" UUID="13a9b383-ba0f-4e65-8aa1-8b812676d150" deferrability="7" deleteRule="3" fk-table-ref="TAB300" fkCardinality="7" identifying="true" name="narudzbedobavljacima_fk" physicalName="narudzbedobavljacima_fk" pk-table-ref="TAB209" pkCardinality="2" updateRule="0" >
+    <column-mapping id="CMP356" populated="true" UUID="b0ea64d3-e8db-461a-8653-002336b3cb1e" fk-column-ref="COL301" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL210" />
+   </relationship>
+   <relationship id="REL357" populated="true" UUID="093c3f92-baa2-4408-a8f5-b6cf5b97cd43" deferrability="7" deleteRule="3" fk-table-ref="TAB321" fkCardinality="7" identifying="false" name="unos_je_izvrsio" physicalName="unos_je_izvrsio" pk-table-ref="TAB209" pkCardinality="2" updateRule="0" >
+    <column-mapping id="CMP358" populated="true" UUID="cb2977a2-efe3-423f-b585-ba006b110fec" fk-column-ref="COL326" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL210" />
+   </relationship>
+   <relationship id="REL359" populated="true" UUID="86d9a8eb-88e8-49b0-b265-0659814217c7" deferrability="7" deleteRule="3" fk-table-ref="TAB313" fkCardinality="7" identifying="false" name="sadr_i_stavke" physicalName="sadr_i_stavke" pk-table-ref="TAB217" pkCardinality="2" updateRule="0" >
+    <column-mapping id="CMP360" populated="true" UUID="1896f236-12ba-48b4-acfb-e8311526575f" fk-column-ref="COL315" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL218" />
+   </relationship>
+   <relationship id="REL361" populated="true" UUID="cc17b9db-b282-48db-9469-5c7389357415" deferrability="7" deleteRule="3" fk-table-ref="TAB217" fkCardinality="7" identifying="false" name="se_odnosi_na" physicalName="se_odnosi_na" pk-table-ref="TAB226" pkCardinality="2" updateRule="0" >
+    <column-mapping id="CMP362" populated="true" UUID="20acd4b3-94b2-4972-820d-9c9f11023d9b" fk-column-ref="COL219" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL227" />
+   </relationship>
+   <relationship id="REL363" populated="true" UUID="1a401da9-4e3f-46b7-8092-6ef610008dbc" deferrability="7" deleteRule="3" fk-table-ref="TAB256" fkCardinality="7" identifying="false" name="ima_sjedi_te_u" physicalName="ima_sjedi_te_u" pk-table-ref="TAB241" pkCardinality="2" updateRule="0" >
+    <column-mapping id="CMP364" populated="true" UUID="5b92c1f0-1955-4265-81c8-af5f3c3302ff" fk-column-ref="COL259" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL242" />
+   </relationship>
+   <relationship id="REL365" populated="true" UUID="f4c4ec40-36ba-43ec-9dc0-be3fb17d62b3" deferrability="7" deleteRule="3" fk-table-ref="TAB272" fkCardinality="7" identifying="true" name="sirovine_fk" physicalName="sirovine_fk" pk-table-ref="TAB249" pkCardinality="2" updateRule="0" >
+    <column-mapping id="CMP366" populated="true" UUID="cc297c68-ca7d-45b9-b62d-0ba31f790f6f" fk-column-ref="COL273" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL250" />
+   </relationship>
+   <relationship id="REL367" populated="true" UUID="36d59765-5e93-4e6e-9f57-4f491e07296d" deferrability="7" deleteRule="3" fk-table-ref="TAB276" fkCardinality="7" identifying="true" name="roba_fk" physicalName="roba_fk" pk-table-ref="TAB249" pkCardinality="2" updateRule="0" >
+    <column-mapping id="CMP368" populated="true" UUID="1405df97-94bc-4694-9d14-30d01e921d02" fk-column-ref="COL277" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL250" />
+   </relationship>
+   <relationship id="REL369" populated="true" UUID="0de6b13f-004a-42fe-9d53-697199e2ec6a" deferrability="7" deleteRule="3" fk-table-ref="TAB329" fkCardinality="7" identifying="true" name="proizvodi_fk" physicalName="proizvodi_fk" pk-table-ref="TAB249" pkCardinality="2" updateRule="0" >
+    <column-mapping id="CMP370" populated="true" UUID="16c9b694-4c06-4f41-b1eb-4d0d4c6607a8" fk-column-ref="COL330" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL250" />
+   </relationship>
+   <relationship id="REL371" populated="true" UUID="77a77ee7-a59d-4ca6-8a7e-26e8c09afbe0" deferrability="7" deleteRule="3" fk-table-ref="TAB290" fkCardinality="7" identifying="true" name="dobavljaci_fk" physicalName="dobavljaci_fk" pk-table-ref="TAB256" pkCardinality="2" updateRule="0" >
+    <column-mapping id="CMP372" populated="true" UUID="b8959eaf-ede1-42e3-9b71-a32b7cbc407d" fk-column-ref="COL291" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL257" />
+   </relationship>
+   <relationship id="REL373" populated="true" UUID="3c26feef-2c14-48c1-9a7c-b2b327eda774" deferrability="7" deleteRule="3" fk-table-ref="TAB197" fkCardinality="7" identifying="false" name="realizuje_se_u" physicalName="realizuje_se_u" pk-table-ref="TAB267" pkCardinality="2" updateRule="0" >
+    <column-mapping id="CMP374" populated="true" UUID="4abbb5ab-2995-4139-ae27-3ce58afb5fe4" fk-column-ref="COL199" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL268" />
+   </relationship>
+   <relationship id="REL375" populated="true" UUID="73cad992-be5f-4f52-ac7c-1fcf6b439621" deferrability="7" deleteRule="3" fk-table-ref="TAB329" fkCardinality="7" identifying="false" name="proizvedeno_u" physicalName="proizvedeno_u" pk-table-ref="TAB267" pkCardinality="2" updateRule="0" >
+    <column-mapping id="CMP376" populated="true" UUID="3d6604a7-397c-4f0d-ae06-771fd7b3a9a5" fk-column-ref="COL331" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL268" />
+   </relationship>
+   <relationship id="REL377" populated="true" UUID="d67cbbaf-99dd-4759-a693-f47cf19550f1" deferrability="7" deleteRule="3" fk-table-ref="TAB249" fkCardinality="7" identifying="false" name="nabavljeni_od" physicalName="nabavljeni_od" pk-table-ref="TAB290" pkCardinality="2" updateRule="0" >
+    <column-mapping id="CMP378" populated="true" UUID="30297802-9ae7-48ab-b9e0-ae41f5b867e8" fk-column-ref="COL253" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL291" />
+   </relationship>
+   <relationship id="REL379" populated="true" UUID="0f898c14-f868-43cb-82e4-53722abb23f9" deferrability="7" deleteRule="3" fk-table-ref="TAB203" fkCardinality="7" identifying="false" name="se_nalazi_u" physicalName="se_nalazi_u" pk-table-ref="TAB306" pkCardinality="2" updateRule="0" >
+    <column-mapping id="CMP380" populated="true" UUID="f826f931-cdd7-441f-af4d-4048bd9bdc26" fk-column-ref="COL205" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL307" />
+   </relationship>
+   <relationship id="REL381" populated="true" UUID="08d91f81-4702-4c14-8c0e-609552f971bf" deferrability="7" deleteRule="3" fk-table-ref="TAB197" fkCardinality="7" identifying="false" name="ovjerio" physicalName="ovjerio" pk-table-ref="TAB321" pkCardinality="2" updateRule="0" >
+    <column-mapping id="CMP382" populated="true" UUID="ae459916-a0ee-4bfe-b87d-b09f792851ac" fk-column-ref="COL200" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL322" />
+   </relationship>
+   <relationship id="REL383" populated="true" UUID="1a8713be-3192-4a40-94d3-9cb2bba7cbff" deferrability="7" deleteRule="3" fk-table-ref="TAB217" fkCardinality="7" identifying="false" name="unos_je_izvr_io" physicalName="unos_je_izvr_io" pk-table-ref="TAB321" pkCardinality="2" updateRule="0" >
+    <column-mapping id="CMP384" populated="true" UUID="610b22d6-74d2-4bb1-a53a-eaa6635025b0" fk-column-ref="COL222" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL322" />
+   </relationship>
+   <relationship id="REL385" populated="true" UUID="02385dbe-ec74-492a-91fa-c81071a38855" deferrability="7" deleteRule="3" fk-table-ref="TAB241" fkCardinality="7" identifying="false" name="se_nalazi_u" physicalName="se_nalazi_u" pk-table-ref="TAB334" pkCardinality="2" updateRule="0" >
+    <column-mapping id="CMP386" populated="true" UUID="86c78e55-f202-455d-9cd0-47a8bb5f3489" fk-column-ref="COL243" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL335" />
+   </relationship>
+  </relationships>
+ </target-database>
+ <ddl-generator type="ca.sqlpower.architect.ddl.GenericDDLGenerator" allow-connection="true"> </ddl-generator>
+ <liquibase-settings useSeparateChangeSets="false" generateId="false" idStart="1"/>
+ <create-kettle-job-settings filePath="" jobName="" schemaName="" kettleJoinType="0" savingToFile="true" />
+ <play-pen zoom="0.5000000000000002" viewportX="0" viewportY="0" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
+  <table-pane table-ref="TAB197" x="29" y="404" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB203" x="943" y="447" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB209" x="127" y="30" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB217" x="347" y="748" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB226" x="65" y="938" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB231" x="353" y="220" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB241" x="1179" y="77" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB249" x="253" y="1075" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB256" x="1211" y="281" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB262" x="1223" y="587" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB267" x="711" y="1331" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB272" x="91" y="1249" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB276" x="277" y="1251" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB280" x="36" y="581" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB285" x="23" y="183" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB290" x="1209" y="447" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB295" x="27" y="286" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB300" x="28" y="695" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB306" x="947" y="603" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB313" x="356" y="935" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB321" x="1013" y="797" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB329" x="515" y="1205" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB334" x="933" y="251" bgColor="0xf0f0f0" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-link relationship-ref="REL343" pkConnection="0.32222222222222224" fkConnection="0.5964125560538116" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="132"/>
+  <table-link relationship-ref="REL345" pkConnection="0.7166666666666667" fkConnection="0.3230769230769231" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="132"/>
+  <table-link relationship-ref="REL361" pkConnection="0.3254437869822485" fkConnection="0.11153846153846154" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="72"/>
+  <table-link relationship-ref="REL347" pkConnection="0.6" fkConnection="0.35555555555555557" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="132"/>
+  <table-link relationship-ref="REL363" pkConnection="0.6878980891719745" fkConnection="0.3503184713375796" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="132"/>
+  <table-link relationship-ref="REL373" pkConnection="0.0" fkConnection="0.8227848101265823" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="18"/>
+  <table-link relationship-ref="REL365" pkConnection="0.2721518987341772" fkConnection="0.3987730061349693" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="132"/>
+  <table-link relationship-ref="REL367" pkConnection="0.4050632911392405" fkConnection="0.39263803680981596" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="132"/>
+  <table-link relationship-ref="REL349" pkConnection="0.85" fkConnection="0.3497536945812808" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="132"/>
+  <table-link relationship-ref="REL351" pkConnection="0.15555555555555556" fkConnection="0.2620320855614973" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="132"/>
+  <table-link relationship-ref="REL377" pkConnection="0.6190476190476191" fkConnection="0.5894736842105263" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="18"/>
+  <table-link relationship-ref="REL371" pkConnection="0.4968152866242038" fkConnection="0.49693251533742333" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="132"/>
+  <table-link relationship-ref="REL353" pkConnection="0.9388888888888889" fkConnection="0.22994652406417113" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="132"/>
+  <table-link relationship-ref="REL355" pkConnection="0.45555555555555555" fkConnection="0.4492753623188406" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="132"/>
+  <table-link relationship-ref="REL379" pkConnection="0.06369426751592357" fkConnection="0.85" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="72"/>
+  <table-link relationship-ref="REL359" pkConnection="0.36538461538461536" fkConnection="0.2" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="132"/>
+  <table-link relationship-ref="REL381" pkConnection="0.09009009009009009" fkConnection="0.34177215189873417" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="18"/>
+  <table-link relationship-ref="REL383" pkConnection="0.32432432432432434" fkConnection="0.7952755905511811" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="18"/>
+  <table-link relationship-ref="REL357" pkConnection="1.0" fkConnection="0.7387387387387387" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="33"/>
+  <table-link relationship-ref="REL369" pkConnection="0.8670886075949367" fkConnection="0.5555555555555556" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="36"/>
+  <table-link relationship-ref="REL375" pkConnection="0.20179372197309417" fkConnection="0.7937219730941704" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="72"/>
+  <table-link relationship-ref="REL385" pkConnection="0.2909090909090909" fkConnection="0.3057324840764331" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="72"/>
+  <table-link relationship-ref="REL341" pkConnection="0.70625" fkConnection="0.24848484848484848" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="72"/>
+ </play-pen>
+ <critic-manager>
+  <critic-grouping platformType="Generic" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.PrimaryKeyCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.RelationshipMappingTypeCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.EmptyRelationshipCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.AlphaNumericNameCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.AlphaNumericSequenceNameCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SetDefaultOnColumnWithNoDefaultCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SetNullOnNonNullableColumnCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.DuplicateNameCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="DB2" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.DB2UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="H2" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.H2UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="HSQLDB" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.HSQLDBUnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="MySQL" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.MySQLCommentCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.MySQLReservedWordsCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.MySQLUnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="Oracle" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.OraclePhysicalNameCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.OracleReservedWordsCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.OracleUnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="PostgreSQL" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.PostgreSQLReservedWordsCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="SQL Server" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServerUnsupportedFeaturesCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServerReservedWordsCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="SQL Server 2000" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServer2000UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="SQL Server 2005" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServer2005UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+ </critic-manager>
+ <profiles topNCount="10">
+  </profiles>
+  <olap>
+  </olap>
+  <olap-gui>
+  </olap-gui>
+</architect-project>

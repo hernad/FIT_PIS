@@ -1,0 +1,500 @@
+ALTER TABLE Adrese DROP CONSTRAINT se_nalazi_u;
+    
+ALTER TABLE Artikli DROP CONSTRAINT nabavljeni_od;
+
+    
+ALTER TABLE Dobavljaci DROP CONSTRAINT Dobavljaci_FK;
+    
+    
+ALTER TABLE Dokumenti DROP  CONSTRAINT kupac_dobavljac_je;
+
+ALTER TABLE FaktureDobavljaca DROP
+    CONSTRAINT FaktureDobavljaca_FK;
+    
+ALTER TABLE Gradovi DROP
+    CONSTRAINT se_nalazi_u;
+
+    
+ALTER TABLE Kantoni DROP
+    CONSTRAINT se_nalazi_u;
+    
+ALTER TABLE Klijenti DROP
+    CONSTRAINT ima_sjedi_te_u;
+    
+ALTER TABLE Korisnici DROP
+    CONSTRAINT unos_je_izvrsio;
+    
+ALTER TABLE Kupci DROP
+    CONSTRAINT Kupci_FK;
+    
+ALTER TABLE NarudzbeDobavljacima DROP
+    CONSTRAINT NarudzbeDobavljacima_FK;
+    
+ALTER TABLE PonudeDobavljaca DROP
+    CONSTRAINT PonudeDobavljaca_FK;
+    
+ALTER TABLE Proizvodi DROP
+    CONSTRAINT Proizvodi_FK;
+    
+ALTER TABLE Proizvodi DROP
+    CONSTRAINT proizvedeno_u;
+    
+ALTER TABLE RacuniKupci DROP
+    CONSTRAINT RacuniKupci_FK;
+    
+ALTER TABLE RadniNalozi DROP
+    CONSTRAINT RadniNalozi_FK;
+    
+ALTER TABLE RadniNalozi DROP
+    CONSTRAINT realizuje_se_u;
+    
+ALTER TABLE RadniNalozi DROP
+    CONSTRAINT ovjerio;
+    
+ALTER TABLE Roba DROP
+    CONSTRAINT Roba_FK;
+    
+ALTER TABLE Sirovine DROP
+    CONSTRAINT Sirovine_FK;
+    
+ALTER TABLE StanjeMagacini DROP
+    CONSTRAINT izvorni_dokument_je;
+    
+ALTER TABLE StanjeMagacini DROP
+    CONSTRAINT se_odnosi_na;
+    
+ALTER TABLE StanjeMagacini DROP
+    CONSTRAINT unos_je_izvr_io;
+    
+ALTER TABLE StavkeDokumenta DROP
+    CONSTRAINT sadr_ai_stavke;
+    
+ALTER TABLE StavkeStanjeMagacina DROP
+    CONSTRAINT sadr_i_stavke;
+    
+ALTER TABLE Adrese DROP
+    CONSTRAINT Adrese_PK;
+    
+DROP TABLE Adrese
+ALTER TABLE Artikli DROP
+    CONSTRAINT Artikli_PK;
+    
+DROP TABLE Artikli
+ALTER TABLE Dobavljaci DROP
+    CONSTRAINT Dobavljaci_PK;
+    
+DROP TABLE Dobavljaci
+ALTER TABLE Dokumenti DROP
+    CONSTRAINT Dokumenti_PK;
+    
+DROP TABLE Dokumenti
+ALTER TABLE Drzave DROP
+    CONSTRAINT Drzave_1_PK;
+    
+DROP TABLE Drzave
+ALTER TABLE FaktureDobavljaca DROP
+    CONSTRAINT FaktureDobavljaca_PK;
+    
+DROP TABLE FaktureDobavljaca
+ALTER TABLE Gradovi DROP
+    CONSTRAINT Gradovi_1_PK;
+
+    
+DROP TABLE Gradovi
+ALTER TABLE Kantoni DROP
+    CONSTRAINT Konatoni_1_PK;
+    
+DROP TABLE Kantoni
+ALTER TABLE Klijenti DROP
+    CONSTRAINT Klijenti_PK;
+    
+DROP TABLE Klijenti
+ALTER TABLE Korisnici DROP
+    CONSTRAINT Korisnici_PK;
+    
+DROP TABLE Korisnici
+ALTER TABLE Kupci DROP
+    CONSTRAINT Kupci_PK;
+    
+DROP TABLE Kupci
+ALTER TABLE Magacini DROP
+    CONSTRAINT Magacini_PK;
+    
+DROP TABLE Magacini
+ALTER TABLE NarudzbeDobavljacima DROP
+    CONSTRAINT NarudzbeDobavljacima_PK;
+    
+DROP TABLE NarudzbeDobavljacima
+ALTER TABLE PonudeDobavljaca DROP
+    CONSTRAINT PonudeDobavljaca_PK;
+    
+DROP TABLE PonudeDobavljaca
+ALTER TABLE Proizvodi DROP
+    CONSTRAINT Proizvodi_PK;
+    
+DROP TABLE Proizvodi
+ALTER TABLE ProizvodniPogoni DROP
+    CONSTRAINT ProizvodniPogoni_PK;
+    
+DROP TABLE ProizvodniPogoni
+ALTER TABLE RacuniKupci DROP
+    CONSTRAINT RacuniKupci_PK;
+    
+DROP TABLE RacuniKupci
+ALTER TABLE RadniNalozi DROP
+    CONSTRAINT RadniNalozi_PK;
+    
+DROP TABLE RadniNalozi
+ALTER TABLE Roba DROP
+    CONSTRAINT Roba_PK;
+    
+DROP TABLE Roba
+ALTER TABLE Sirovine DROP
+    CONSTRAINT Sirovine_PK
+DROP TABLE Sirovine;
+
+ALTER TABLE StanjeMagacini DROP
+    CONSTRAINT StanjeMagacini_PK
+DROP TABLE StanjeMagacini;
+
+ALTER TABLE StavkeDokumenta DROP
+    CONSTRAINT DokumentiStavke_PK;
+    
+DROP TABLE StavkeDokumenta;
+
+ALTER TABLE StavkeStanjeMagacina DROP
+    CONSTRAINT StavkeStanjeMagacina_PK;
+    
+DROP TABLE StavkeStanjeMagacina;
+
+CREATE TABLE Adrese(
+          AdresaID                                INTEGER NOT NULL,
+          GradID                                  INTEGER NOT NULL,
+          Ulica                                   CHARACTER(100) NOT NULL,
+          Broj                                    CHARACTER(10) NOT NULL,
+          BrojTelefona                            CHARACTER(20) NOT NULL);
+          
+ALTER TABLE Adrese ADD
+    CONSTRAINT Adrese_PK PRIMARY KEY (AdresaID);
+    
+CREATE TABLE Artikli(
+          ArtikalID                               INTEGER NOT NULL,
+          Naziv                                   CHARACTER(100) NOT NULL,
+          SkraceniNaziv                           CHARACTER(20) NOT NULL,
+          KlijentID                               INTEGER NOT NULL);
+          
+ALTER TABLE Artikli ADD
+    CONSTRAINT Artikli_PK PRIMARY KEY (ArtikalID);
+    
+CREATE TABLE Dobavljaci(
+          KlijentID                               INTEGER NOT NULL,
+          StalniDobavljac                        CHARACTER(1) NOT NULL);
+          
+ALTER TABLE Dobavljaci ADD
+    CONSTRAINT Dobavljaci_PK PRIMARY KEY (KlijentID);
+    
+    
+CREATE TABLE Dokumenti(
+          DokumentId                              INTEGER NOT NULL,
+          DatumDokumenta                          DATE NOT NULL,
+          Opis                                    CHARACTER(200) NOT NULL,
+          BrojDokumenta                           CHARACTER(50) NOT NULL,
+          KlijentID                               INTEGER NOT NULL);
+          
+ALTER TABLE Dokumenti ADD
+    CONSTRAINT Dokumenti_PK PRIMARY KEY (DokumentId);
+
+    
+CREATE TABLE Drzave(
+          DrzavaID                                INTEGER NOT NULL,
+          Oznaka                                  CHARACTER(2) NOT NULL,
+          OznakaValuta                            CHARACTER(3) NOT NULL,
+          Naziv                                   CHARACTER(100) NOT NULL);
+          
+ALTER TABLE Drzave ADD
+    CONSTRAINT Drzave_1_PK PRIMARY KEY (DrzavaID);
+    
+CREATE TABLE FaktureDobavljaca(
+          DokumentId                              INTEGER NOT NULL,
+          UsloviPlacanja                          CHARACTER(100) NOT NULL);
+          
+ALTER TABLE FaktureDobavljaca ADD
+    CONSTRAINT FaktureDobavljaca_PK PRIMARY KEY (DokumentId);
+
+    
+CREATE TABLE Gradovi(
+          GradID                                  INTEGER NOT NULL,
+          KanttonID                               INTEGER NOT NULL,
+          PTT                                     CHARACTER(6) NOT NULL,
+          Naziv                                   CHARACTER(100) NOT NULL);
+          
+ALTER TABLE Gradovi ADD
+    CONSTRAINT Gradovi_1_PK PRIMARY KEY (GradID);
+
+    
+CREATE TABLE Kantoni(
+          KantonID                                INTEGER NOT NULL,
+          DrzavaID                                INTEGER NOT NULL,
+          Naziv                                   CHARACTER(100) NOT NULL);
+          
+ALTER TABLE Kantoni ADD
+    CONSTRAINT Konatoni_1_PK PRIMARY KEY (KantonID);
+
+    
+CREATE TABLE Klijenti(
+          KlijentID                               INTEGER NOT NULL,
+          PDVBroj                                 CHARACTER(13) NOT NULL,
+          AdresaID                                INTEGER NOT NULL);
+          
+ALTER TABLE Klijenti ADD
+    CONSTRAINT Klijenti_PK PRIMARY KEY (KlijentID);
+
+    
+CREATE TABLE Korisnici(
+          KorisnikID                              INTEGER NOT NULL,
+          KorisnikIme                             CHARACTER(50) NOT NULL,
+          KorisnikLozinka                         CHARACTER(50) NOT NULL,
+          email                                   CHARACTER(100) NOT NULL,
+          DokumentId                              INTEGER NOT NULL);
+          
+ALTER TABLE Korisnici ADD
+    CONSTRAINT Korisnici_PK PRIMARY KEY (KorisnikID);
+
+    
+CREATE TABLE Kupci(
+          Kooperant                               CHARACTER(1) NOT NULL,
+          KlijentID                               INTEGER NOT NULL);
+          
+ALTER TABLE Kupci ADD
+    CONSTRAINT Kupci_PK PRIMARY KEY (KlijentID);
+
+    
+CREATE TABLE Magacini(
+          MagacinID                               INTEGER NOT NULL,
+          NazivMagacina                           CHARACTER(50) NOT NULL);
+          
+ALTER TABLE Magacini ADD
+    CONSTRAINT Magacini_PK PRIMARY KEY (MagacinID);
+    
+    
+CREATE TABLE NarudzbeDobavljacima(
+          DokumentId                              INTEGER NOT NULL,
+          VezaPonudaDobavljaca                    INTEGER NOT NULL,
+          DodatneNapomene                         CHARACTER(200) NOT NULL);
+          
+ALTER TABLE NarudzbeDobavljacima ADD
+    CONSTRAINT NarudzbeDobavljacima_PK PRIMARY KEY (DokumentId);
+
+    
+CREATE TABLE PonudeDobavljaca(
+          DokumentId                              INTEGER NOT NULL,
+          UsloviIsporuke                          CHARACTER(200) NOT NULL);
+          
+ALTER TABLE PonudeDobavljaca ADD
+    CONSTRAINT PonudeDobavljaca_PK PRIMARY KEY (DokumentId);
+
+    
+CREATE TABLE Proizvodi(
+          ArtikalID                               INTEGER NOT NULL,
+          ProizvodniPogonID                       INTEGER NOT NULL);
+          
+ALTER TABLE Proizvodi ADD
+    CONSTRAINT Proizvodi_PK PRIMARY KEY (ArtikalID);
+
+    
+CREATE TABLE ProizvodniPogoni(
+          ProizvodniPogonID                       INTEGER NOT NULL,
+          NazivPogona                             CHARACTER(100) NOT NULL);
+          
+ALTER TABLE ProizvodniPogoni ADD
+    CONSTRAINT ProizvodniPogoni_PK PRIMARY KEY (ProizvodniPogonID);
+    
+CREATE TABLE RacuniKupci(
+          ReklamiraniRacunBroj                    CHARACTER(50) NOT NULL,
+          DokumentId                              INTEGER NOT NULL,
+          TekstNaKrajuRacuna                      CHARACTER(200) NOT NULL);
+          
+ALTER TABLE RacuniKupci ADD
+    CONSTRAINT RacuniKupci_PK PRIMARY KEY (DokumentId);
+
+    
+CREATE TABLE RadniNalozi(
+          DokumentId                              INTEGER NOT NULL,
+          ProizvodniPogonID                       INTEGER NOT NULL,
+          OvlastenoLiceID                         INTEGER NOT NULL);
+          
+ALTER TABLE RadniNalozi ADD
+    CONSTRAINT RadniNalozi_PK PRIMARY KEY (DokumentId);
+
+    
+CREATE TABLE Roba(
+          ArtikalID                               INTEGER NOT NULL);
+          
+ALTER TABLE Roba ADD
+    CONSTRAINT Roba_PK PRIMARY KEY (ArtikalID);
+    
+CREATE TABLE Sirovine(
+          ArtikalID                               INTEGER NOT NULL);
+          
+ALTER TABLE Sirovine ADD
+    CONSTRAINT Sirovine_PK PRIMARY KEY (ArtikalID);
+    
+CREATE TABLE StanjeMagacini(
+          MagacinskaTransakcijaID                 INTEGER NOT NULL,
+          MagacinID                               INTEGER NOT NULL,
+          DokumentID                              INTEGER NOT NULL,
+          OpisTransakcije                         CHARACTER(200) NOT NULL,
+          KorisnikID                              INTEGER NOT NULL,
+          DatumTransakcije                        DATE NOT NULL);
+          
+ALTER TABLE StanjeMagacini ADD
+    CONSTRAINT StanjeMagacini_PK PRIMARY KEY (MagacinskaTransakcijaID);
+
+    
+CREATE TABLE StavkeDokumenta(
+          StavkaID                                INTEGER NOT NULL,
+          DokumentID                              INTEGER NOT NULL,
+          ArtikalID                               INTEGER NOT NULL,
+          KolicinA                                DOUBLE PRECISION NOT NULL,
+          Cijena                                  DOUBLE PRECISION NOT NULL,
+          Popust                                  DOUBLE PRECISION NOT NULL,
+          Poveznica                               INTEGER NOT NULL);
+          
+ALTER TABLE StavkeDokumenta ADD
+    CONSTRAINT DokumentiStavke_PK PRIMARY KEY (StavkaID);
+    
+CREATE TABLE StavkeStanjeMagacina(
+          StavkaID                                INTEGER NOT NULL,
+          MagacinskaTransakcijaID                 INTEGER NOT NULL,
+          Kolicina                                DOUBLE PRECISION NOT NULL,
+          ArtikalID                               INTEGER NOT NULL,
+          Cijena                                  DOUBLE PRECISION NOT NULL);
+          
+ALTER TABLE StavkeStanjeMagacina ADD
+    CONSTRAINT StavkeStanjeMagacina_PK PRIMARY KEY (StavkaID);
+    
+ALTER TABLE Adrese ADD 
+    CONSTRAINT se_nalazi_u FOREIGN KEY (GradID)
+    REFERENCES Gradovi (GradID)
+    ON UPDATE CASCADE;
+
+ALTER TABLE Artikli ADD 
+    CONSTRAINT nabavljeni_od FOREIGN KEY (KlijentID)
+    REFERENCES Dobavljaci (KlijentID)
+    ON UPDATE CASCADE;
+
+ALTER TABLE Dobavljaci ADD 
+    CONSTRAINT Dobavljaci_FK FOREIGN KEY (KlijentID)
+    REFERENCES Klijenti (KlijentID)
+    ON UPDATE CASCADE;
+
+ALTER TABLE Dokumenti ADD 
+    CONSTRAINT kupac_dobavljac_je FOREIGN KEY (KlijentID)
+    REFERENCES Klijenti (KlijentID)
+    ON UPDATE CASCADE;
+
+ALTER TABLE FaktureDobavljaca ADD 
+    CONSTRAINT FaktureDobavljaca_FK FOREIGN KEY (DokumentId)
+    REFERENCES Dokumenti (DokumentId)
+    ON UPDATE CASCADE;
+
+ALTER TABLE Gradovi ADD 
+    CONSTRAINT se_nalazi_u FOREIGN KEY (KanttonID)
+    REFERENCES Kantoni (KantonID)
+    ON UPDATE CASCADE;
+
+ALTER TABLE Kantoni ADD 
+    CONSTRAINT se_nalazi_u FOREIGN KEY (DrzavaID)
+    REFERENCES Drzave (DrzavaID)
+    ON UPDATE CASCADE;
+
+ALTER TABLE Klijenti ADD 
+    CONSTRAINT ima_sjedi_te_u FOREIGN KEY (AdresaID)
+    REFERENCES Adrese (AdresaID)
+    ON UPDATE CASCADE;
+
+ALTER TABLE Korisnici ADD 
+    CONSTRAINT unos_je_izvrsio FOREIGN KEY (DokumentId)
+    REFERENCES Dokumenti (DokumentId)
+    ON UPDATE CASCADE;
+
+ALTER TABLE Kupci ADD 
+    CONSTRAINT Kupci_FK FOREIGN KEY (KlijentID)
+    REFERENCES Klijenti (KlijentID)
+    ON UPDATE CASCADE;
+
+ALTER TABLE NarudzbeDobavljacima ADD 
+    CONSTRAINT NarudzbeDobavljacima_FK FOREIGN KEY (DokumentId)
+    REFERENCES Dokumenti (DokumentId)
+    ON UPDATE CASCADE;
+
+ALTER TABLE PonudeDobavljaca ADD 
+    CONSTRAINT PonudeDobavljaca_FK FOREIGN KEY (DokumentId)
+    REFERENCES Dokumenti (DokumentId)
+    ON UPDATE CASCADE;
+
+ALTER TABLE Proizvodi ADD 
+    CONSTRAINT Proizvodi_FK FOREIGN KEY (ArtikalID)
+    REFERENCES Artikli (ArtikalID)
+    ON UPDATE CASCADE;
+
+ALTER TABLE Proizvodi ADD 
+    CONSTRAINT proizvedeno_u FOREIGN KEY (ProizvodniPogonID)
+    REFERENCES ProizvodniPogoni (ProizvodniPogonID)
+    ON UPDATE CASCADE;
+
+ALTER TABLE RacuniKupci ADD 
+    CONSTRAINT RacuniKupci_FK FOREIGN KEY (DokumentId)
+    REFERENCES Dokumenti (DokumentId)
+    ON UPDATE CASCADE;
+
+ALTER TABLE RadniNalozi ADD 
+    CONSTRAINT RadniNalozi_FK FOREIGN KEY (DokumentId)
+    REFERENCES Dokumenti (DokumentId)
+    ON UPDATE CASCADE;
+
+ALTER TABLE RadniNalozi ADD 
+    CONSTRAINT realizuje_se_u FOREIGN KEY (ProizvodniPogonID)
+    REFERENCES ProizvodniPogoni (ProizvodniPogonID)
+    ON UPDATE CASCADE;
+
+ALTER TABLE RadniNalozi ADD 
+    CONSTRAINT ovjerio FOREIGN KEY (OvlastenoLiceID)
+    REFERENCES Korisnici (KorisnikID)
+    ON UPDATE CASCADE;
+
+ALTER TABLE Roba ADD 
+    CONSTRAINT Roba_FK FOREIGN KEY (ArtikalID)
+    REFERENCES Artikli (ArtikalID)
+    ON UPDATE CASCADE;
+
+ALTER TABLE Sirovine ADD 
+    CONSTRAINT Sirovine_FK FOREIGN KEY (ArtikalID)
+    REFERENCES Artikli (ArtikalID)
+    ON UPDATE CASCADE;
+
+ALTER TABLE StanjeMagacini ADD 
+    CONSTRAINT izvorni_dokument_je FOREIGN KEY (DokumentID)
+    REFERENCES Dokumenti (DokumentId)
+    ON UPDATE CASCADE;
+
+ALTER TABLE StanjeMagacini ADD 
+    CONSTRAINT se_odnosi_na FOREIGN KEY (MagacinID)
+    REFERENCES Magacini (MagacinID)
+    ON UPDATE CASCADE;
+
+ALTER TABLE StanjeMagacini ADD 
+    CONSTRAINT unos_je_izvr_io FOREIGN KEY (KorisnikID)
+    REFERENCES Korisnici (KorisnikID)
+    ON UPDATE CASCADE;
+
+ALTER TABLE StavkeDokumenta ADD 
+    CONSTRAINT sadr_ai_stavke FOREIGN KEY (DokumentID)
+    REFERENCES Dokumenti (DokumentId)
+    ON UPDATE CASCADE;
+
+ALTER TABLE StavkeStanjeMagacina ADD 
+    CONSTRAINT sadr_i_stavke FOREIGN KEY (MagacinskaTransakcijaID)
+    REFERENCES StanjeMagacini (MagacinskaTransakcijaID)
+    ON UPDATE CASCADE;
+
